@@ -1,0 +1,282 @@
+package com.mobile.api.proto;
+
+import java.util.*;
+import com.mobile.base.model.Bean2Json;
+import org.json.*;
+
+public class MAppTreeHole {
+
+	static public class MTreeHole extends Bean2Json<MTreeHole> {
+		private static final long serialVersionUID = 1L;
+		private List<MTopic> topics = new ArrayList<MTopic>();
+		private int newsCnt;
+		public List<MTopic> getTopics() {
+			return this.topics;
+		}
+		public void setTopics(List<MTopic> topics) {
+			this.topics=topics;
+		}
+		public int getNewsCnt() {
+			return this.newsCnt;
+		}
+		public void setNewsCnt(int newsCnt) {
+			this.newsCnt=newsCnt;
+		}
+		public MTreeHole build() throws Exception {
+			JSONArray jatopics = data.getJSONArray("topics_");
+			for(int i = 0, len = jatopics.length(); i < len; i++) {
+				MTopic n = new MTopic();n.setData(jatopics.getJSONObject(i));this.topics.add(n);
+			}
+			this.setNewsCnt(data.getInt("newsCnt_"));
+			return this;
+		}
+
+	}
+
+	static public class MTopic extends Bean2Json<MTopic> {
+		private static final long serialVersionUID = 1L;
+		private String id;
+		private String title;
+		private String content;
+		private String time;
+		private String imgs;
+		private int praiseCnt;
+		private int commentCnt;
+		private int hasPraise;
+		private List<MComment> comment = new ArrayList<MComment>();
+		private String createTime;
+		private String author;
+		public String getId() {
+			return this.id;
+		}
+		public void setId(String id) {
+			this.id=id;
+		}
+		public String getTitle() {
+			return this.title;
+		}
+		public void setTitle(String title) {
+			this.title=title;
+		}
+		public String getContent() {
+			return this.content;
+		}
+		public void setContent(String content) {
+			this.content=content;
+		}
+		public String getTime() {
+			return this.time;
+		}
+		public void setTime(String time) {
+			this.time=time;
+		}
+		public String getImgs() {
+			return this.imgs;
+		}
+		public void setImgs(String imgs) {
+			this.imgs=imgs;
+		}
+		public int getPraiseCnt() {
+			return this.praiseCnt;
+		}
+		public void setPraiseCnt(int praiseCnt) {
+			this.praiseCnt=praiseCnt;
+		}
+		public int getCommentCnt() {
+			return this.commentCnt;
+		}
+		public void setCommentCnt(int commentCnt) {
+			this.commentCnt=commentCnt;
+		}
+		public int getHasPraise() {
+			return this.hasPraise;
+		}
+		public void setHasPraise(int hasPraise) {
+			this.hasPraise=hasPraise;
+		}
+		public List<MComment> getComment() {
+			return this.comment;
+		}
+		public void setComment(List<MComment> comment) {
+			this.comment=comment;
+		}
+		public String getCreateTime() {
+			return this.createTime;
+		}
+		public void setCreateTime(String createTime) {
+			this.createTime=createTime;
+		}
+		public String getAuthor() {
+			return this.author;
+		}
+		public void setAuthor(String author) {
+			this.author=author;
+		}
+		public MTopic build() throws Exception {
+			this.setId(data.getString("id_"));
+			this.setTitle(data.getString("title_"));
+			this.setContent(data.getString("content_"));
+			this.setTime(data.getString("time_"));
+			this.setImgs(data.getString("imgs_"));
+			this.setPraiseCnt(data.getInt("praiseCnt_"));
+			this.setCommentCnt(data.getInt("commentCnt_"));
+			this.setHasPraise(data.getInt("hasPraise_"));
+			JSONArray jacomment = data.getJSONArray("comment_");
+			for(int i = 0, len = jacomment.length(); i < len; i++) {
+				MComment n = new MComment();n.setData(jacomment.getJSONObject(i));this.comment.add(n);
+			}
+			this.setCreateTime(data.getString("createTime_"));
+			this.setAuthor(data.getString("author_"));
+			return this;
+		}
+
+	}
+
+	static public class MComment extends Bean2Json<MComment> {
+		private static final long serialVersionUID = 1L;
+		private String id;
+		private String userid1;
+		private String nickname1;
+		private String userid2;
+		private String nickname2;
+		private String content;
+		private String time;
+		private String pid;
+		private String title;
+		private String author;
+		public String getId() {
+			return this.id;
+		}
+		public void setId(String id) {
+			this.id=id;
+		}
+		public String getUserid1() {
+			return this.userid1;
+		}
+		public void setUserid1(String userid1) {
+			this.userid1=userid1;
+		}
+		public String getNickname1() {
+			return this.nickname1;
+		}
+		public void setNickname1(String nickname1) {
+			this.nickname1=nickname1;
+		}
+		public String getUserid2() {
+			return this.userid2;
+		}
+		public void setUserid2(String userid2) {
+			this.userid2=userid2;
+		}
+		public String getNickname2() {
+			return this.nickname2;
+		}
+		public void setNickname2(String nickname2) {
+			this.nickname2=nickname2;
+		}
+		public String getContent() {
+			return this.content;
+		}
+		public void setContent(String content) {
+			this.content=content;
+		}
+		public String getTime() {
+			return this.time;
+		}
+		public void setTime(String time) {
+			this.time=time;
+		}
+		public String getPid() {
+			return this.pid;
+		}
+		public void setPid(String pid) {
+			this.pid=pid;
+		}
+		public String getTitle() {
+			return this.title;
+		}
+		public void setTitle(String title) {
+			this.title=title;
+		}
+		public String getAuthor() {
+			return this.author;
+		}
+		public void setAuthor(String author) {
+			this.author=author;
+		}
+		public MComment build() throws Exception {
+			this.setId(data.getString("id_"));
+			this.setUserid1(data.getString("userid1_"));
+			this.setNickname1(data.getString("nickname1_"));
+			this.setUserid2(data.getString("userid2_"));
+			this.setNickname2(data.getString("nickname2_"));
+			this.setContent(data.getString("content_"));
+			this.setTime(data.getString("time_"));
+			this.setPid(data.getString("pid_"));
+			this.setTitle(data.getString("title_"));
+			this.setAuthor(data.getString("author_"));
+			return this;
+		}
+
+	}
+
+	static public class MNewComments extends Bean2Json<MNewComments> {
+		private static final long serialVersionUID = 1L;
+		private List<MComment> news = new ArrayList<MComment>();
+		private int cnt;
+		public List<MComment> getNews() {
+			return this.news;
+		}
+		public void setNews(List<MComment> news) {
+			this.news=news;
+		}
+		public int getCnt() {
+			return this.cnt;
+		}
+		public void setCnt(int cnt) {
+			this.cnt=cnt;
+		}
+		public MNewComments build() throws Exception {
+			JSONArray janews = data.getJSONArray("news_");
+			for(int i = 0, len = janews.length(); i < len; i++) {
+				MComment n = new MComment();n.setData(janews.getJSONObject(i));this.news.add(n);
+			}
+			this.setCnt(data.getInt("cnt_"));
+			return this;
+		}
+
+	}
+
+	static public class MAddTopic extends Bean2Json<MAddTopic> {
+		private static final long serialVersionUID = 1L;
+		private String title;
+		private String content;
+		private String[] imgs;
+		public String getTitle() {
+			return this.title;
+		}
+		public void setTitle(String title) {
+			this.title=title;
+		}
+		public String getContent() {
+			return this.content;
+		}
+		public void setContent(String content) {
+			this.content=content;
+		}
+		public String[] getImgs() {
+			return this.imgs;
+		}
+		public void setImgs(String[] imgs) {
+			this.imgs=imgs;
+		}
+		public MAddTopic build() throws Exception {
+			this.setTitle(data.getString("title_"));
+			this.setContent(data.getString("content_"));
+			return this;
+		}
+
+	}
+
+
+}

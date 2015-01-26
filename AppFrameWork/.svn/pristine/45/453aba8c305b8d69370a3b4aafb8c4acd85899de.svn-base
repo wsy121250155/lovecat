@@ -1,0 +1,16 @@
+package com.mobile.base.util;
+
+import android.util.Log;
+
+public class MLog {
+	private static String TAG = "com.zsdx";
+	private static String ERROR_TAG = "com.zsdx.err";
+	
+	public static void d(String msg) {
+		Log.d(TAG, msg);
+	}
+	
+	public static void e(String message, Throwable e) {
+		Log.e(ERROR_TAG, message, e);
+	}
+}

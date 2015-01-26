@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_top_height"
+        android:background="@drawable/posts_topbar" >
+
+        <LinearLayout
+            android:id="@+id/close_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/back_button"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="*长按卡片以添加到首页*"
+            android:textColor="#494949"
+            android:textSize="@dimen/common_top_title_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical" >
+
+        <com.ailk.ec.unitdesk.ui.widget.PageIndicator
+            android:id="@+id/page_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="8dp" >
+        </com.ailk.ec.unitdesk.ui.widget.PageIndicator>
+    </LinearLayout>
+
+    <com.ailk.ec.unitdesk.ui.widget.TemplateViewGroup
+        android:id="@+id/temp_llayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_below="@id/title_layout"
+        android:layout_margin="10dp" >
+    </com.ailk.ec.unitdesk.ui.widget.TemplateViewGroup>
+
+</RelativeLayout>

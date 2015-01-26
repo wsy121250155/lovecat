@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/cate_llayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/cate_top_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/cate_top_height" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                 >
+
+                <ImageView
+                    android:id="@+id/ic_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/cate_ic_margin_left"
+                    android:layout_marginRight="@dimen/cate_ic_margin_left"
+                    android:background="@drawable/ic_cate" />
+
+                <TextView
+                    android:id="@+id/cate_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="我的数据"
+                    android:textColor="#73757e"
+                    android:textSize="@dimen/cate_title_text_size" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.ailk.ec.unitdesk.ui.widget.PostsViewGroup
+            android:id="@+id/posts_llayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.ailk.ec.unitdesk.ui.widget.PostsViewGroup>
+    </LinearLayout>
+
+</RelativeLayout>

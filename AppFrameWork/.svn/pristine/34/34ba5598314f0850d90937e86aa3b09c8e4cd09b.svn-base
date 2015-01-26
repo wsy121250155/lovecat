@@ -1,0 +1,28 @@
+package com.mobile.zsdx.model;
+
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+
+public class TreeHoleCommonList extends ArrayList<TreeHoleCommon> implements Bean2Json<TreeHoleCommonList>{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public TreeHoleCommonList build(JSONObject jsonObject) throws Exception {
+		JSONArray ja = jsonObject.getJSONObject("data").getJSONArray("comments_");
+		
+		for(int i = 0 ; i < ja.length() ; i++){
+			TreeHoleCommon treeHoleCommon = new TreeHoleCommon();
+			treeHoleCommon.build(ja.getJSONObject(i));
+			this.add(treeHoleCommon);
+		}
+		return this;
+	}
+
+}

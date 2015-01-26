@@ -1,0 +1,59 @@
+package com.mobile.base.http;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.mobile.base.util.ConstantResource;
+
+public class ParamsFormat {
+	private String methodno;
+	private String deviceid = ConstantResource.getDeviceid();
+	private String appid = ConstantResource.APPID;
+	private String userid = "";
+	private String verify = "";
+	private Map<String, Object> params = new HashMap<String, Object>();
+	
+	
+	public void addParam(String key, Object value) {
+		params.put(key, value);
+	}
+	public void removeParam(String key) {
+		params.remove(key);
+	}
+	public String getMethodno() {
+		return methodno;
+	}
+	public void setMethodno(String methedno) {
+		this.methodno = methedno;
+	}
+	public String getDeviceid() {
+		return deviceid;
+	}
+	public void setDeviceid(String deviceid) {
+		this.deviceid = deviceid;
+	}
+	public String getAppid() {
+		return appid;
+	}
+	public void setAppid(String appid) {
+		this.appid = appid;
+	}
+	public String getUserid() {
+		return userid;
+	}
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+	public String getVerify() {
+		return verify;
+	}
+	public void setVerify(String verify) {
+		this.verify = verify;
+	}
+	public Map<String, Object> getParams() {
+		return params;
+	}
+	public void setParams(Map<String, Object> params) {
+		this.params = params;
+	}	
+}

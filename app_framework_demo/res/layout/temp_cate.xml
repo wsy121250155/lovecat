@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 只显示 标题 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/cate_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/cate_edit_rect_bg"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+         >
+
+        <TextView
+            android:id="@+id/cate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#6891c1"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+             />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ic_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_cate_close_hover_st2" />
+    </LinearLayout>
+
+</RelativeLayout>

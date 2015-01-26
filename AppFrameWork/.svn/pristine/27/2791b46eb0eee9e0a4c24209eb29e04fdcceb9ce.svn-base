@@ -1,0 +1,49 @@
+package com.mobile.zsdx.index;
+
+import com.mobile.base.MainActivity;
+import com.mobile.base.R;
+import com.mobile.base.util.ConstantResource;
+import com.mobile.zsdx.rss.RSSActivity;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.telephony.TelephonyManager;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+/**
+ * 
+ * @author liang
+ *
+ */
+public class IndexActivity extends Activity{
+	
+	private Button button;
+	
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.index);
+		
+		button=(Button) findViewById(R.id.rss);
+		button.setOnClickListener(getListener("rss"));
+		
+		//初始化deviceid
+		ConstantResource.tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+	}
+
+	public OnClickListener getListener(final String string){
+		OnClickListener listener=new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				if(string.equals("rss")){
+					Intent i=new Intent(IndexActivity.this,RSSActivity.class);
+					IndexActivity.this.startActivity(i);
+				}
+			}
+		};
+		return listener;
+	}
+}

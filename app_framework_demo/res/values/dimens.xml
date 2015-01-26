@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <dimen name="index_padding_bottom">80dp</dimen>
+    <dimen name="publish_text_size">12sp</dimen>
+    <dimen name="chart_label_text_size">9sp</dimen>
+    <dimen name="chart_title_text_size">15sp</dimen>
+    <dimen name="chart_axis_text_size">12sp</dimen>
+    <dimen name="chart_legend_text_size">15sp</dimen>
+    <dimen name="chart_margin_size_bottom">18dp</dimen>
+    <dimen name="chart_margin_size_top">32dp</dimen>
+    <dimen name="chart_line_width_size">1dp</dimen>
+    <dimen name="chart_line_point_size">2dp</dimen>
+    <dimen name="chart_axis_text_space">6dp</dimen>
+    <dimen name="date_picker_text_size">14sp</dimen>
+    <dimen name="competitor_view_width">480dp</dimen>
+    <dimen name="competitor_view_height">650dp</dimen>
+    <dimen name="task_receiver_buttom_height">30dp</dimen>
+    <dimen name="dp200">100dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp55">55dp</dimen>
+    <dimen name="TextSwitcherSize">60dp</dimen>
+    <dimen name="progressTextSize">14sp</dimen>
+    <dimen name="TextSwitcherTextSize">15dp</dimen>
+    <dimen name="TextSwitcherMarginSize">2dp</dimen>
+    <dimen name="DevTableMaxHeight">250dp</dimen>
+
+    <!-- 登录 页 -->
+    <dimen name="login_area_margin">20dp</dimen>
+    <dimen name="login_text_area_margin">15dp</dimen>
+    <dimen name="forget_pwd_area_paddingLeft">25dp</dimen>
+    <dimen name="choose_pwd_marginTop">34dp</dimen>
+    <dimen name="code_marginTop">17dp</dimen>
+    <dimen name="login_btn_marginTop">20dp</dimen>
+    <dimen name="login_text_size">24sp</dimen>
+    <dimen name="login_btn_text_size">24sp</dimen>
+
+    <!-- 主页 -->
+    <dimen name="dialog_margin">27dp</dimen>
+    <dimen name="posts_title_text_size">11sp</dimen>
+    <dimen name="posts_value_text_size">39sp</dimen>
+
+    <dimen name="cate_title_text_size">15sp</dimen>
+</resources>

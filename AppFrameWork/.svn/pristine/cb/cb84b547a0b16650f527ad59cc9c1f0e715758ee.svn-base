@@ -1,0 +1,16 @@
+package com.mobile.base.http;
+
+import com.mobile.base.util.ConstantResource;
+
+public class ParamsFormatFactory {
+	public static ParamsFormat getParamsFormat() {
+		ParamsFormat pf = new ParamsFormat();
+		
+		pf.setAppid(ConstantResource.APPID);
+		pf.setDeviceid(ConstantResource.getDeviceid());
+		pf.setUserid(ConstantResource.USERID);
+		pf.setVerify(ConstantResource.VERIFY);
+		
+		return pf;
+	}
+}

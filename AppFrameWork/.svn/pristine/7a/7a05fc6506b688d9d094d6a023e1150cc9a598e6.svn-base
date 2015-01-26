@@ -1,0 +1,196 @@
+package com.mobile.zsdx.schedule;
+
+import java.util.Calendar;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.mobile.base.R;
+import com.mobile.base.http.ApiClientFactory;
+import com.mobile.base.util.ConstantResource;
+import com.mobile.base.util.MLog;
+import com.mobile.zsdx.model.Bean2Json;
+import com.mobile.zsdx.model.NewsList;
+
+public class ScheduleFragment extends Fragment {
+	private int dayCnt = 7;
+	private TextView[] weeks = new TextView[dayCnt]; //日期和星期表头
+	private TextView weekFirst; //总表头
+	
+	private LayoutInflater inflater;
+	private View contextView;
+	private ViewGroup viewgroup;
+	private boolean created = false; //View是否已被创建
+	
+	/**
+	 * 创建Fragment视图
+	 * @param savedInstanceState
+	 */
+	protected void create(Bundle savedInstanceState) {
+		setContentView(R.layout.frg_schedule); //填充UI布局
+		
+		weekFirst = (TextView)findViewById(R.id.weekdFirst);
+		
+		//weekIds长度必须为dayCnt
+		int[] weekIds = {R.id.weekd1,R.id.weekd2,R.id.weekd3,R.id.weekd4,R.id.weekd5,R.id.weekd6,R.id.weekd7};
+		
+		for(int i = 0; i < dayCnt; i++) {
+			weeks[i] = (TextView)findViewById(weekIds[i]);
+		}
+
+		this.setValue();
+	}
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
+		this.inflater = inflater;
+		this.viewgroup = viewGroup;
+		
+		if(!this.created) {//如果没有创建UI在这里创建
+			this.create(savedInstanceState);
+			this.created = true;
+		}
+		
+		return this.contextView;
+	}
+	
+	
+	public void setValue() {
+		Calendar mCalendar = Calendar.getInstance();
+		mCalendar.setTimeInMillis(System.currentTimeMillis());
+		
+		int week = mCalendar.get(Calendar.DAY_OF_WEEK);
+		
+		//根据当前是星期几映射到相应位置上的TextView
+		if (week == 1) {
+            week = 6;
+        } else {
+            week -= 2;
+        }
+		
+		//设置表头内容
+		weekFirst.setText(mCalendar.get(Calendar.MONTH) + 1 + "月");
+		weekFirst.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				ApiClientFactory.getNewsListApi(getActivity(), ScheduleFragment.this, "dataload", 1, 20);
+			}
+		});
+		mCalendar.add(Calendar.DAY_OF_MONTH, -week);
+		for(int i = 0; i < weeks.length; i++) {
+			weeks[i].setText(mCalendar.get(Calendar.DAY_OF_MONTH) + "\n" + ConstantResource.getWeekName(i));
+			weeks[i].setBackgroundColor(0xFFFFFFFF);
+			mCalendar.add(Calendar.DAY_OF_MONTH, 1);
+		}
+		
+		weeks[week].setBackgroundColor(0xffffd7ff);
+	}
+	
+	@SuppressWarnings("rawtypes")
+	public void dataload(Bean2Json list) {
+		MLog.d("success");
+		Toast.makeText(getActivity(), ((NewsList)list).get(0).toString(), Toast.LENGTH_SHORT).show();
+	}
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		
+	}
+	
+	public void setContentView(int contextView) {
+		this.contextView = this.inflater.inflate(contextView, this.viewgroup, false);
+	}
+	
+	/**
+	 * 便于操作
+	 * @param id
+	 * @return
+	 */
+	public View findViewById(int id) {
+		View res = null;
+		if(this.contextView != null)
+			res = this.contextView.findViewById(id);
+		return res;
+	}
+	
+	
+	/*
+	 * setter & getter
+	 */
+	public LayoutInflater getInflater() {
+		return inflater;
+	}
+
+	public void setInflater(LayoutInflater inflater) {
+		this.inflater = inflater;
+	}
+
+	public View getContextView() {
+		return contextView;
+	}
+
+	public void setContextView(View contextView) {
+		this.contextView = contextView;
+	}
+
+	public ViewGroup getViewgroup() {
+		return viewgroup;
+	}
+
+	public void setViewgroup(ViewGroup viewgroup) {
+		this.viewgroup = viewgroup;
+	}
+
+	public boolean isCreated() {
+		return created;
+	}
+
+	public void setCreated(boolean created) {
+		this.created = created;
+	}
+	
+	public void setActionBar(ActionBar actionBar, Context context) {
+		actionBar.setDisplayShowTitleEnabled(false);
+		actionBar.setDisplayShowHomeEnabled(false);
+		
+		LayoutInflater inflater = LayoutInflater.from(context);
+		View view = inflater.inflate(R.layout.actb_head_control, null);
+		
+		ActionBar.LayoutParams layoutParams = new ActionBar.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+		layoutParams.gravity = Gravity.RIGHT;
+		
+		actionBar.setCustomView(view, layoutParams);
+		
+		TextView title = (TextView)view.findViewById(R.id.tv_title);
+		title.setText("课程表");
+		
+		TextView subtitle = (TextView)view.findViewById(R.id.tv_subTitle);
+		subtitle.setText("第5周");
+		
+		Button btn_back = (Button)view.findViewById(R.id.btn_back);
+		btn_back.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				getActivity().finish();
+			}
+		});
+		
+		
+	}
+}

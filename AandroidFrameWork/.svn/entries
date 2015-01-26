@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://192.168.1.13:8443/svn/frame"
+   revision="1"
+   last-author="liulu"
+   url="https://192.168.1.13:8443/svn/frame/AandroidFrameWork"
+   uuid="1034c0ce-f0af-b34d-8cf0-0ec2d7f9218f"
+   committed-rev="1"
+   kind="dir"
+   committed-date="2014-07-08T00:46:15.342125Z"/>
+<entry
+   name=".classpath"
+   revision="2"
+   checksum="6c094a1e72258481d21d2ef20bc0880d"
+   last-author="liulu"
+   text-time="2013-06-24T16:48:21.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:37.000000Z"/>
+<entry
+   name=".project"
+   revision="2"
+   checksum="1a025c5a033c1e2092eb6a1923c6c9bf"
+   last-author="liulu"
+   text-time="2013-06-24T16:48:18.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name=".settings"
+   kind="dir"/>
+<entry
+   name="AndroidManifest.xml"
+   revision="2"
+   checksum="736c50adb2f27be45136766f74be9ea8"
+   last-author="liulu"
+   text-time="2014-05-05T04:12:19.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="assets"
+   kind="dir"/>
+<entry
+   name="bin"
+   kind="dir"/>
+<entry
+   name="gen"
+   kind="dir"/>
+<entry
+   name="ic_launcher-web.png"
+   revision="2"
+   checksum="03162f4ee138bcbae36f78b1d25dbd5b"
+   last-author="liulu"
+   text-time="2013-06-24T16:48:19.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:42.000000Z"/>
+<entry
+   name="libs"
+   kind="dir"/>
+<entry
+   name="lint.xml"
+   revision="2"
+   checksum="1ce274a186a2afb9f76542702f6ecc4d"
+   last-author="liulu"
+   text-time="2014-04-21T07:43:57.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"/>
+<entry
+   name="proguard-project.txt"
+   revision="2"
+   checksum="18bfe77c342b4698f1cef19cf8d918e2"
+   last-author="liulu"
+   text-time="2013-06-24T16:48:18.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:43.000000Z"/>
+<entry
+   name="project.properties"
+   revision="2"
+   checksum="14046a6410397545dbda198ebd719787"
+   last-author="liulu"
+   text-time="2014-05-22T02:49:44.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:42.000000Z"/>
+<entry
+   name="res"
+   kind="dir"/>
+<entry
+   name="src"
+   kind="dir"/>
+</wc-entries>

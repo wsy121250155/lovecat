@@ -1,0 +1,45 @@
+package com.mobile.base.widget.views;
+
+import org.kobjects.base64.Base64;
+
+import net.tsz.afinal.FinalBitmap;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.AttributeSet;
+import android.widget.ImageView;
+
+/*
+ * 封装了通过路径加载图片的imageView
+ */
+public class MImageView extends ImageView {
+	public MImageView(Context context) {
+		super(context);
+		finalBitmap = FinalBitmap.create(context);
+	}
+
+	public MImageView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		// TODO Auto-generated constructor stub
+		finalBitmap = FinalBitmap.create(context);
+	}
+
+	private FinalBitmap finalBitmap;
+
+
+	public void setImage(String url){
+		finalBitmap.display(this, url);
+	}
+
+	public void setImageBase64(String data) {
+		byte[] bytes = Base64.decode(data);
+		this.setImageBitmap(bytes2Bm(bytes));
+	}
+	
+	public Bitmap bytes2Bm(byte[] b) {
+		if (b == null) {
+			b = new byte[1];
+		}
+		return BitmapFactory.decodeByteArray(b, 0, b.length);
+	}
+}

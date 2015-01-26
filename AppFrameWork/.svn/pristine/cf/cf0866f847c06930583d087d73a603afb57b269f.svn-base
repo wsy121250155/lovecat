@@ -1,0 +1,37 @@
+package com.mobile.base.commons;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
+
+public class Zip {
+	private static int BUFF_SIZE = 2048;
+	
+	/**
+	 * 压缩到指定文件
+	 * @param in
+	 * @param out
+	 * @param name
+	 * @throws IOException
+	 */
+	public void zip(InputStream in, OutputStream out, String name) throws IOException {
+		ZipOutputStream zops = new ZipOutputStream(new BufferedOutputStream(out));
+		ZipEntry zpe = new ZipEntry(name);
+		zops.putNextEntry(zpe);
+		byte[] buff = new byte[BUFF_SIZE];
+		BufferedInputStream bin = new BufferedInputStream(in, BUFF_SIZE);
+		int len = 0;
+		while((len = bin.read(buff, 0, BUFF_SIZE)) != -1) {
+			zops.write(buff, 0, len);
+		}
+		bin.close();
+		in.close();
+		zops.close();
+	}
+	
+	
+}

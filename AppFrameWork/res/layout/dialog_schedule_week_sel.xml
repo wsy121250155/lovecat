@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#d8d8d8" >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:text="@string/qx"
+            android:textColor="@drawable/bt_grencolor_tv"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/xzskzs"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:background="#ffffff" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:text="@string/qd"
+            android:textColor="@drawable/bt_grencolor_tv"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/weeks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_login_input"
+        android:orientation="vertical"
+        android:paddingLeft="1px"
+        android:paddingTop="1px" >
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/checked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weeks"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/dz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/ck_check"
+            android:text="@string/dz"
+            android:background="#ffffff"
+            android:textColor="#333333" />
+
+        <RadioButton
+            android:id="@+id/sz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/ck_check"
+            android:text="@string/sz"
+            android:background="#ffffff"
+            android:textColor="#333333" />
+
+        <RadioButton
+            android:id="@+id/qb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/ck_check"
+            android:checked="true"
+            android:background="#ffffff"
+            android:text="@string/qb"
+            android:textColor="#333333" />
+    </RadioGroup>
+
+</RelativeLayout>

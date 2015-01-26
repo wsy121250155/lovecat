@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <!-- 登录界面 -->
+    <dimen name="choose_pwd_marginTop">34dp</dimen>
+
+    <!-- 主页 -->
+    <dimen name="dialog_margin">27dp</dimen>
+    <dimen name="posts_title_text_size">12sp</dimen>
+    <dimen name="posts_value_text_size">43sp</dimen>
+    <dimen name="m_large_text_size">18sp</dimen>
+    
+    <!-- 4*1 磁贴标题长度限制 -->
+    <dimen name="title_width_41">200dp</dimen>
+
+</resources>

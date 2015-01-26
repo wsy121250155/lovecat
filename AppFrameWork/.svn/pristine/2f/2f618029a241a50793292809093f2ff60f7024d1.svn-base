@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppFrameWork</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="rss">订阅</string>
+    <string name="qbpl">全部评论</string>
+    <string name="qd">确定</string>
+    <string name="qx">取消</string>
+    
+    <!-- 课程表 -->
+    <string name="schedule">课程表</string>
+    <string name="mc">名称</string>
+    <string name="ls">老师</string>
+    <string name="js">教室</string>
+    <string name="jieshu">节数</string>
+    <string name="zhoushu">周数</string>
+    <string name="hmc">在此输入名称</string>
+    <string name="hls">在输入老师</string>
+    <string name="hjs">在此输入教室</string>
+    <string name="xzskzs">选择上课周数</string>
+    <string name="dz">单周</string>
+    <string name="sz">双周</string>
+    <string name="qb">全部</string>
+    <string name="rkls">任课老师:</string>
+    <string name="sj">时间:</string>
+    <string name="sckc">删除课程</string>
+    <string name="dd">地点:</string>
+    <string name="zs">周数:</string>
+    
+    <!-- 树洞 -->
+    <string name="rm">热门</string>
+    <string name="tj">推荐</string>
+    <string name="fb">发表</string>
+    <string name="bylzfb">  不以楼主发表</string>
+    <string name="pz">拍照</string>
+    <string name="kbx">(可不选)</string>
+    <string name="xc">相册</string>  
+    <string name="biaoti">#话题</string>
+    <string name="djgh">点击更换</string>
+    <string name="nmfb">匿名发表树洞,不超过120字</string>
+    
+    <!-- 登录对话框 -->
+    <string name="denglu">登录</string>
+    <string name="xuehao">学号</string>
+    <string name="mima">教务处密码</string>
+    <string name="jiaoyanma">验证码</string>
+    <string name="loginin">登录</string>
+    <string name="zidongchaxun">自动查询</string>
+</resources>

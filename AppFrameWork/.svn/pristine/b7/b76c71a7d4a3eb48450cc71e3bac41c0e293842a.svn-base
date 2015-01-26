@@ -1,0 +1,292 @@
+package com.mobile.zsdx.schedule;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import android.content.Context;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.mobile.api.proto.MSystem.MClass;
+import com.mobile.api.proto.MSystem.MClassList;
+import com.mobile.base.R;
+import com.mobile.zsdx.util.F;
+
+public class ScheduleLayout extends LinearLayout {
+	private Map<String, List<MClass>> classList = new HashMap<String, List<MClass>>(); //课程数据列表
+	private Map<String, RelativeLayout> layouts = new HashMap<String, RelativeLayout>(); //课程表控件
+	private int rowCount = 15; //1天最多的节数
+	
+	private LayoutParams layoutparam = new LayoutParams(0, LayoutParams.WRAP_CONTENT);
+    
+    private LayoutParams layoutparamw = new LayoutParams((int) getResources().getDimension(R.dimen.scheduleWeekW),
+            LayoutParams.WRAP_CONTENT);
+    
+    private LayoutParams fillParam = new LayoutParams(LayoutParams.MATCH_PARENT,
+            (int) getResources().getDimension(R.dimen.scheduleWeekh) - 1);
+	    
+    public ScheduleLayout(Context context) {
+        super(context);
+        init();
+    }
+    
+    public ScheduleLayout(Context context, MClassList data) {
+        super(context);
+        init();
+        setData(data);
+    }
+	
+	public void setData(MClassList data) {
+		init();
+		initData(data);
+	}
+
+	/**
+	 * 初始化UI
+	 */
+	private void init() {
+		layoutparam.weight = 1;
+        fillParam.setMargins(0, 1, 1, 0);
+        this.setOrientation(LinearLayout.HORIZONTAL);
+        this.removeAllViews();
+		//填充表格
+		addLinearLayout();
+	}
+	
+	/**
+	 * 初始化，添加背景UI容器
+	 */
+	private void addLinearLayout() {
+		layouts.clear();
+		classList.clear();
+		//填充第1列，节数
+		LinearLayout layout = new LinearLayout(getContext());
+		layout.setOrientation(LinearLayout.VERTICAL);
+		layout.setBackgroundColor(0xffd8d8d8);
+		for (int j = 1; j <= rowCount; j++) {
+            TextView tv = getTv(j + "");
+            layout.addView(tv);
+        }
+        this.addView(layout, layoutparamw);
+        
+        //单天课表列布局
+        int oh = (int) getResources().getDimension(R.dimen.scheduleWeekh);
+        LayoutParams lp = new LayoutParams(android.view.ViewGroup.LayoutParams.MATCH_PARENT, rowCount * oh);
+        lp.weight = 1;
+        for (int i = 1; i <= 7; i++) {
+            RelativeLayout layoutR = new RelativeLayout(getContext());
+            layouts.put(i + "", layoutR);
+            layoutR.setBackgroundColor(0xffffffff);
+            this.addView(layoutR, lp);
+        }
+	}
+	
+	public void initData(MClassList data) {
+		for(MClass mc : data.getClass_()) {
+			String mcw = mc.getDay() + "";
+			List<MClass> mcs = classList.get(mcw);
+			if(mcs == null) {
+				mcs = new ArrayList<MClass>();
+				classList.put(mcw, mcs);
+			}
+			mcs.add(mc);
+		}
+		
+		int oh = (int) getResources().getDimension(R.dimen.scheduleWeekh);
+        LayoutInflater f = LayoutInflater.from(getContext());
+
+        for (String key : layouts.keySet()) {
+            RelativeLayout rl = layouts.get(key);     
+            rl.removeAllViewsInLayout();
+            List<MclassEs> mclasses = calcClass(classList.get(key));
+
+            for (int i = 0; i < mclasses.size(); i++) {
+                MclassEs me = mclasses.get(i);
+                
+                View v = f.inflate(R.layout.item_schedule, null);
+                RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+                        android.view.ViewGroup.LayoutParams.MATCH_PARENT, oh * (me.to - me.frome + 1));
+                lp.setMargins(0, (me.frome - 1) * oh, 0, 0);
+                
+                setView(v, me, F.colorind, Integer.valueOf(key), data.getWeek());
+                rl.addView(v, lp);
+            }
+        }
+	}
+	
+	private void setView(View v, final MclassEs me, int key, int i, int now_week) {
+        View ic = v.findViewById(R.id.image);
+        TextView tv = (TextView) v.findViewById(R.id.kecheng);
+    	final int now_week_f = now_week;
+        v.setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+//                if (me.clases.size() > 1) {
+//
+//                    ScheduleDialog sl = new ScheduleDialog(getContext(), me.clases, now_week_f);
+//                    sl.show();
+//                } else {
+//                    ScheduleDetailDialog sl = new ScheduleDetailDialog(getContext(), me.clases.get(0));
+//                    sl.show();
+//                }
+            }
+        });
+        if (me.clases.size() > 1) {
+            ic.setVisibility(View.VISIBLE);
+        } else {
+            ic.setVisibility(View.INVISIBLE);
+        }
+        
+        List<MClass> claz = me.clases;
+        int len = claz.size();
+        int j = len - 1;
+        int ii = 0;
+        while(ii < len) {
+        	if(ii == j)
+        		break;
+        	else {
+        		MClass c = claz.get(ii);
+            	boolean isBusyWeek = isBusyWeek(c.getBusyweeks(), now_week);
+            	
+            	if(!isBusyWeek) { //没有课，交换最后一个未检查的最后一个，ii大小不变
+            		Collections.swap(claz, ii, j--);
+            	} else {
+            		ii++; //有课的话检查下一个
+            	}
+        	}
+        }
+        String busyweek = claz.get(0).getBusyweeks();
+        
+        String busyText = "";
+        if(isBusyWeek(busyweek, now_week)) {
+        	v.setBackgroundColor(F.getColor(F.getColor(me.frome + 12 * i) + key));	
+        } else {
+        	v.setBackgroundResource(R.color.bt_gray_l);
+        	busyText = " @ 本周无课";
+        }
+        
+        if(me.clases.get(0).getName().toString().length()>=8){
+        	tv.setText(me.clases.get(0).getName().toString().substring(0, 8)+"..."+" @ "+me.clases.get(0).getAddress().toString() + busyText);
+        }else {
+        	tv.setText(me.clases.get(0).getName().toString()+" @ "+me.clases.get(0).getAddress().toString() + busyText);
+		}
+
+    }
+	
+	/**
+	 * 课程表单元格
+	 * @param str
+	 * @return
+	 */
+	public TextView getTv(String str) {
+        TextView tv = new TextView(getContext());
+        tv.setText(str);
+        tv.setBackgroundColor(0xffffffff);
+        tv.setLayoutParams(fillParam);
+        tv.setGravity(Gravity.CENTER);
+        return tv;
+    }
+	
+	public static boolean isBusyWeek(String busyweeks, int now_week) {
+    	boolean flag = false;
+    	String now_week_s = now_week + "";
+    	Log.d("xxx", now_week_s);
+    	if(!TextUtils.isEmpty(busyweeks)) {
+    		String[] bws = busyweeks.split(",");
+    		for(String s : bws) {
+    			Log.d("xxx", s);
+    			if(now_week_s.equals(s) || now_week == -1 || now_week == 0)
+    				flag = true;
+    		}
+    	} else {
+    		flag = true;
+    	}
+    	
+    	return flag;
+    }
+	
+	private List<MclassEs> calcClass(List<MClass> classes) {
+        List<MclassEs> list = new ArrayList<MclassEs>();
+        if (classes == null) {
+            return list;
+        }
+        Collections.sort(classes, new ComparatorClass());
+        for (MClass clas : classes) {
+            boolean isinsert = false;
+            for (MclassEs me : list) {
+                if (me.addClass(clas)) {
+                    isinsert = true;
+                    break;
+                }
+            }
+
+            if (!isinsert) {
+                MclassEs me = new MclassEs();
+                me.clases.add(clas);
+                me.addr = clas.getAddress();
+                me.name = clas.getName();
+                me.frome = clas.getBegin();
+                me.to = clas.getEnd();
+                list.add(me);
+            }
+        }
+        return list;
+    }
+	
+	public class ComparatorClass implements java.util.Comparator<MClass> {
+        
+        public int compare(MClass cl1, MClass cl2) {
+            
+            // 首先比较年龄，如果年龄相同，则比较名字
+            
+            int flag =cl1.getEnd()- cl1.getBegin();
+            int flag2 =cl2.getEnd()- cl2.getBegin();
+            if(flag2>flag){
+                return 1;
+            }else{
+                return -1;
+            }
+        }
+        
+    }
+	
+	/**
+	 * 同一时间的课程列表
+	 * @author yjh
+	 *
+	 */
+	 public class MclassEs {
+	        public String name;
+	        
+	        public int frome;
+	        
+	        public int to;
+	        
+	        public String addr;
+	        
+	        public List<MClass> clases = new ArrayList<MClass>();
+	        
+	        public boolean addClass(MClass clas) {
+	            if ((frome > clas.getEnd() || to < clas.getBegin())) {
+	                return false;
+	            } else {
+	                to = Math.max(to, clas.getEnd());
+	                frome = Math.min(frome, clas.getBegin());
+	                name += "\n" + clas.getName();
+	                addr += "\n" + clas.getAddress();
+	                clases.add(clas);
+	                return true;
+	            }
+	        }
+	    }
+}

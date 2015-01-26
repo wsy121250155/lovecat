@@ -1,0 +1,101 @@
+/**
+ * 
+ */
+package com.mobile.base.http;
+
+import java.math.BigDecimal;
+import java.util.Date;
+import java.util.Map;
+
+import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.RequestParams;
+import com.mobile.base.util.AppConfig;
+import com.mobile.base.util.ConstantResource;
+import com.mobile.base.util.DateUtil;
+import com.mobile.base.util.MLog;
+import com.mobile.zsdx.model.Bean2Json;
+
+/**
+ * 接口调用逻辑层
+ * 
+ * @author spoon
+ * 
+ */
+public class ApiClient {
+	private static AsyncHttpClient client = new AsyncHttpClient();
+	private ParamsFormat pf;
+	private Bean2Json b2jData;
+	
+	public void getApiData(Context context, Object controller, String methodName) {
+		MJsonResponseHandler handler = new MJsonResponseHandler(context, controller, b2jData, methodName);
+        try {
+			client.get(ConstantResource.URL, makeURL(pf), handler);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Toast.makeText(context, ConstantResource.INTERFACE_ERROR, Toast.LENGTH_SHORT).show();
+		}
+	}
+	
+	public void getApiFile(Context context, Object controller, String methodName) {
+		
+	}
+	
+	private static RequestParams makeURL(ParamsFormat obj) throws Exception {
+		RequestParams params = new RequestParams();
+		//封装基本参数
+		params.put("appid", AppConfig.getAPPID());
+		params.put("deviceid", ConstantResource.getDeviceid());
+		params.put("methodno", obj.getMethodno());
+		params.put("userid", ConstantResource.USERID);
+		params.put("verify", ConstantResource.VERIFY);
+		for(Map.Entry<String, Object> e: obj.getParams().entrySet()) {
+			Object o = e.getValue();
+			if(o instanceof Date) {//格式化日期
+				params.put(e.getKey(), DateUtil.dateToStr((Date)o, "yyyy-MM-dd HH:mm:ss"));
+			} else if(!isBasicData(o)) {
+				params.remove(e.getKey());
+			} else {
+				params.put(e.getKey(), e.getValue());
+			}
+		}
+		MLog.d(params.toString());
+		return params;
+	}
+	
+	
+	
+	@SuppressWarnings("rawtypes")
+	public static boolean isBasicData(Object o) {
+		Class clz = o.getClass();
+		return clz.equals(Integer.TYPE) || clz.equals(Long.TYPE)
+		|| clz.equals(String.class) || clz.equals(Double.TYPE)
+		|| clz.equals(Short.TYPE) || clz.equals(Character.TYPE)
+		|| clz.equals(Boolean.TYPE) || clz.equals(Byte.TYPE) || clz.equals(Float.TYPE)
+		|| clz.equals(Long.class) || clz.equals(BigDecimal.class)
+		|| clz.equals(Integer.class) || clz.equals(Float.class) 
+		|| clz.equals(Byte.class) || clz.equals(Boolean.class)
+		|| clz.equals(Short.class) || clz.equals(Character.class)
+		|| clz.equals(Double.class);
+	}
+
+	public ParamsFormat getPf() {
+		return pf;
+	}
+
+	public void setPf(ParamsFormat pf) {
+		this.pf = pf;
+	}
+
+	public Bean2Json getB2jData() {
+		return b2jData;
+	}
+
+	public void setB2jData(Bean2Json b2jData) {
+		this.b2jData = b2jData;
+	}
+	
+}

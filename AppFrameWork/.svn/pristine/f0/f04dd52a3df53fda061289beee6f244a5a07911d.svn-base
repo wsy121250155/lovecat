@@ -1,0 +1,36 @@
+package com.mobile.zsdx.treehole;
+
+import javax.security.auth.PrivateCredentialPermission;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import com.mobile.base.MFragment;
+import com.mobile.base.R;
+import com.mobile.base.widget.views.MImageView;
+
+public class THAnnounceFragment extends MFragment{
+
+    private View taglayout, photolayout, getphotobycam, getphotobyfile, deletePhoto, layout;
+    private ScrollView scrollview;
+    private TextView tag, small;
+    
+    private MImageView image;
+    
+    private EditText editText;
+    
+    private int scrollHeight=0;
+	public void create(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.treeholeadd);
+		
+        taglayout = findViewById(R.id.taglayout);
+        photolayout = findViewById(R.id.photolayout);
+        getphotobycam = findViewById(R.id.getphotobycam);
+        getphotobyfile = findViewById(R.id.getphotobyfile);
+        scrollview=(ScrollView) findViewById(R.id.scrollview);
+	}
+}

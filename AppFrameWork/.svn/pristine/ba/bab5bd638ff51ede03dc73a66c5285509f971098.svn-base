@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="262dp"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical"
+    android:paddingBottom="22dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFFFF" >
+
+        <TextView
+            android:id="@+id/dialog_denglu"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:background="#FFFFFFFF"
+            android:text="@string/denglu"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/dialog_tuichu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_delete" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/dialog_xuehao"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_login_input"
+        android:hint="@string/xuehao"
+        android:padding="10dp"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/dialog_mima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_login_input"
+        android:hint="@string/mima"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/verifyLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:background="#FFFFFFFF" >
+
+        <EditText
+            android:id="@+id/verify"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_input"
+            android:hint="@string/jiaoyanma"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <com.mobile.base.widget.views.MImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="#FFFFFFFF"
+            android:text="@string/zidongchaxun" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFFFF" >
+
+        <CheckBox
+            android:id="@+id/dialog_zidongim"
+            android:layout_width="51dp"
+            android:layout_height="31dp"
+            android:button="@drawable/bg_switch"
+            android:checked="true"
+            android:background="#FFFFFFFF"
+            android:textColor="#999999"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/zidongchaxun"
+            android:textColor="#999999"
+            android:textSize="18sp"
+            android:background="#FFFFFFFF" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dialog_chaxun"
+        style="@style/TextView_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bt_purple"
+        android:text="@string/loginin" />
+
+</LinearLayout>

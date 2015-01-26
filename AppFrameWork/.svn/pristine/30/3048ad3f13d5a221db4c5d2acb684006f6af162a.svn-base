@@ -1,0 +1,60 @@
+package com.mobile.zsdx.model;
+
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class MyRssNews implements Bean2Json<MyRssNews>{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String id;
+	private String title;
+	private NewsList newsList;
+
+	public NewsList getNewsList() {
+		return newsList;
+	}
+
+	public void setNewsList(NewsList newsList) {
+		this.newsList = newsList;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	@Override
+	public MyRssNews build(JSONObject jsonObject) throws Exception {
+		// TODO Auto-generated method stub
+		this.setId(jsonObject.getJSONObject("data").getString("id_"));
+		this.setTitle(jsonObject.getJSONObject("data").getString("title_"));
+		
+		this.newsList=new NewsList();
+		JSONArray ja = jsonObject.getJSONObject("data").getJSONArray("news_");
+		for(int i = 0, len = ja.length(); i < len; i++) {
+			News n = new News();
+			n.build(ja.getJSONObject(i));
+			this.newsList.add(n);
+		}
+		this.setNewsList(newsList);
+		
+		return this;
+	}
+
+}

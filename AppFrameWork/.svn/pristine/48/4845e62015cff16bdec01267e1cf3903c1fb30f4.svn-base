@@ -1,0 +1,26 @@
+package com.mobile.base.widget.views;
+
+import net.tsz.afinal.FinalBitmap;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.ImageView;
+
+/*
+ * 封装了通过路径加载图片的imageView
+ */
+public class MImageView extends ImageView {
+
+	private FinalBitmap finalBitmap;
+	public MImageView(Context context) {
+		super(context);
+		finalBitmap = FinalBitmap.create(context);
+	}
+	public MImageView(Context context, AttributeSet attributeSet){
+		super(context, attributeSet);
+		finalBitmap = FinalBitmap.create(context);
+	}
+	public void setImage(String url){
+		finalBitmap.display(this, url);
+	}
+
+}

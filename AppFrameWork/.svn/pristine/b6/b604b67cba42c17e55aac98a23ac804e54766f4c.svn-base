@@ -1,0 +1,78 @@
+package com.mobile.base.http;
+
+import com.mobile.api.proto.MAppNews.MNewsList;
+import com.mobile.api.proto.MAppNews.MRssList;
+
+import android.content.Context;
+
+public class ApiClientFactory {
+	/*
+	 * 获取新闻列表
+	 */
+	public static void getNewsListApi(Context context, Object controller, String methodName, int page, int limit) {
+		ApiClient client = new ApiClient();
+		
+		ParamsFormat pf = ParamsFormatFactory.getParamsFormat("MNewsList", page, limit);
+		
+		MNewsList list = new MNewsList(); 
+		
+		client.setPf(pf);	//传递参数
+		client.setB2jData(list); //填充数据
+		
+		client.getApiData(context, controller, methodName);
+	}
+	
+	public static void getScheduleApi(Context context, Object controller, String methodName) {
+		ApiClient client = new ApiClient();
+		
+		ParamsFormat pf = ParamsFormatFactory.getParamsFormat("");
+		
+		
+	}
+	
+	/*
+	 * 获取订阅列表
+	 */
+	public static void getRssList(Context context,Object controller,String methodName,int page ,int limit){
+		ApiClient client=new ApiClient();
+		
+		ParamsFormat pf=ParamsFormatFactory.getParamsFormat("MAllRss",page,limit);
+		MRssList list=new MRssList();
+		
+		client.setPf(pf);
+		client.setB2jData(list);
+		
+		client.getApiData(context, controller, methodName);
+	}
+	/*
+	 * 获取订阅的新闻列表
+	 */
+	public static void getMRssNews(Context context,Object controller,String methodName,String rssid,int page,int limit){
+	    ApiClient client=new ApiClient();
+		
+		ParamsFormat pf=ParamsFormatFactory.getParamsFormat("MRssNews",page,limit);
+		pf.addParam("rssid", rssid);
+		MNewsList list=new MNewsList();
+		
+		client.setPf(pf);
+		client.setB2jData(list);
+		
+		client.getApiData(context, controller, methodName);
+	}
+
+	/*
+	 * 我的订阅
+	 */
+	public static void getMyRss(Context context,Object controller,String methodName,int page,int limit) {
+		ApiClient client=new ApiClient();
+		
+		ParamsFormat pf=ParamsFormatFactory.getParamsFormat("MMyRss",page,limit);
+		MRssList list=new MRssList();
+		
+		client.setPf(pf);
+		client.setB2jData(list);
+		
+		client.getApiData(context, controller, methodName);
+		
+	}
+}

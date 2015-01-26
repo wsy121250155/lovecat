@@ -1,0 +1,41 @@
+package com.mobile.zsdx.rss;
+
+import java.util.List;
+
+import com.mobile.base.R;
+import com.mobile.base.http.ApiClientFactory;
+import com.mobile.base.widget.pullfreshlist.PullToRefreshListView;
+import com.mobile.zsdx.model.Bean2Json;
+import com.mobile.zsdx.model.Rss;
+import com.mobile.zsdx.model.RssList;
+
+import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.widget.ImageView;
+
+public class RSSSelectActivity extends ActionBarActivity{
+	private List<Rss> mlist;
+	private PullToRefreshListView listView;
+	private RSSSelectAdapter adapter;
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.rssselected);
+		listView=(PullToRefreshListView) findViewById(R.id.rssselectedlist);
+		adapter=new RSSSelectAdapter(mlist, this);
+		listView.setAdapter(adapter);
+		ApiClientFactory.getMyRss(this, RSSSelectActivity.this, "getMyRss", 1, 20);
+		setActionBar();
+	}
+	public void getMyRss(Bean2Json list){
+		mlist.addAll((RssList)list);
+		adapter.notifyDataSetChanged();
+	}
+	
+	private void setActionBar(){
+		ActionBar actionBar=getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayUseLogoEnabled(false);
+		actionBar.setTitle("全部订阅");
+	}
+}

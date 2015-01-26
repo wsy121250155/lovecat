@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="2dp"
+    android:background="@color/df_w_color"
+    android:orientation="vertical" >
+    
+    <com.mobile.base.widget.pullfreshlist.PullToRefreshListView
+        android:id="@+id/thmainlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/df_w_color"
+        android:cacheColorHint="@color/transparent"
+        android:divider="#ffffffff"
+        android:dividerHeight="1dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#a812a5" />
+
+    <LinearLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/bt_background_gray" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="说点什么吧"
+            android:textColor="#c0c0c0"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="发表"
+            android:textColor="#c0c0c0"
+            android:textSize="16sp" />
+    </LinearLayout>
+    
+</LinearLayout>

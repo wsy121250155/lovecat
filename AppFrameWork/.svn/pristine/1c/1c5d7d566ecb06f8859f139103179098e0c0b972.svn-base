@@ -1,0 +1,738 @@
+package com.mobile.api.proto;
+
+import java.util.*;
+import com.mobile.base.model.Bean2Json;
+import org.json.*;
+
+public class MSystem {
+
+	static public class MRet extends Bean2Json<MRet> {
+		private static final long serialVersionUID = 1L;
+		private int code;
+		private String msg;
+		private String img;
+		public int getCode() {
+			return this.code;
+		}
+		public void setCode(int code) {
+			this.code=code;
+		}
+		public String getMsg() {
+			return this.msg;
+		}
+		public void setMsg(String msg) {
+			this.msg=msg;
+		}
+		public String getImg() {
+			return this.img;
+		}
+		public void setImg(String img) {
+			this.img=img;
+		}
+		public MRet build() throws Exception {
+			this.setCode(data.getInt("code_"));
+			this.setMsg(data.getString("msg_"));
+			this.setImg(data.getString("img_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setCode(((MRet)data).getCode());
+			this.setMsg(((MRet)data).getMsg());
+			this.setImg(((MRet)data).getImg());
+		}
+
+	}
+
+	static public class MImg extends Bean2Json<MImg> {
+		private static final long serialVersionUID = 1L;
+		private String img;
+		public String getImg() {
+			return this.img;
+		}
+		public void setImg(String img) {
+			this.img=img;
+		}
+		public MImg build() throws Exception {
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setImg(((MImg)data).getImg());
+		}
+
+	}
+
+	static public class MRoomList extends Bean2Json<MRoomList> {
+		private static final long serialVersionUID = 1L;
+		private List<MRoom> room = new ArrayList<MRoom>();
+		public List<MRoom> getRoom() {
+			return this.room;
+		}
+		public void setRoom(List<MRoom> room) {
+			this.room=room;
+		}
+		public MRoomList build() throws Exception {
+			JSONArray jaroom = data.getJSONArray("room_");
+			for(int i = 0, len = jaroom.length(); i < len; i++) {
+				MRoom n = new MRoom();n.setData(jaroom.getJSONObject(i));this.room.add(n);
+			}
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setRoom(((MRoomList)data).getRoom());
+		}
+
+	}
+
+	static public class MRoom extends Bean2Json<MRoom> {
+		private static final long serialVersionUID = 1L;
+		private String name;
+		private String[] num;
+		public String getName() {
+			return this.name;
+		}
+		public void setName(String name) {
+			this.name=name;
+		}
+		public String[] getNum() {
+			return this.num;
+		}
+		public void setNum(String[] num) {
+			this.num=num;
+		}
+		public MRoom build() throws Exception {
+			this.setName(data.getString("name_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setName(((MRoom)data).getName());
+			this.setNum(((MRoom)data).getNum());
+		}
+
+	}
+
+	static public class MClassList extends Bean2Json<MClassList> {
+		private static final long serialVersionUID = 1L;
+		private int week;
+		private List<MClass> class_ = new ArrayList<MClass>();
+		private String img1;
+		public int getWeek() {
+			return this.week;
+		}
+		public void setWeek(int week) {
+			this.week=week;
+		}
+		public List<MClass> getClass_() {
+			return this.class_;
+		}
+		public void setClass_(List<MClass> class_) {
+			this.class_=class_;
+		}
+		public String getImg1() {
+			return this.img1;
+		}
+		public void setImg1(String img1) {
+			this.img1=img1;
+		}
+		public MClassList build() throws Exception {
+			this.setWeek(data.getInt("week_"));
+			JSONArray jaclass_ = data.getJSONArray("class_");
+			for(int i = 0, len = jaclass_.length(); i < len; i++) {
+				MClass n = new MClass();n.setData(jaclass_.getJSONObject(i));this.class_.add(n);
+			}
+			this.setImg1(data.getString("img1_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setWeek(((MClassList)data).getWeek());
+			this.setClass_(((MClassList)data).getClass_());
+			this.setImg1(((MClassList)data).getImg1());
+		}
+
+	}
+
+	static public class MClass extends Bean2Json<MClass> {
+		private static final long serialVersionUID = 1L;
+		private String id;
+		private String name;
+		private String teacher;
+		private String address;
+		private String week;
+		private int day;
+		private int begin;
+		private int end;
+		private String time;
+		private String busyweeks;
+		public String getId() {
+			return this.id;
+		}
+		public void setId(String id) {
+			this.id=id;
+		}
+		public String getName() {
+			return this.name;
+		}
+		public void setName(String name) {
+			this.name=name;
+		}
+		public String getTeacher() {
+			return this.teacher;
+		}
+		public void setTeacher(String teacher) {
+			this.teacher=teacher;
+		}
+		public String getAddress() {
+			return this.address;
+		}
+		public void setAddress(String address) {
+			this.address=address;
+		}
+		public String getWeek() {
+			return this.week;
+		}
+		public void setWeek(String week) {
+			this.week=week;
+		}
+		public int getDay() {
+			return this.day;
+		}
+		public void setDay(int day) {
+			this.day=day;
+		}
+		public int getBegin() {
+			return this.begin;
+		}
+		public void setBegin(int begin) {
+			this.begin=begin;
+		}
+		public int getEnd() {
+			return this.end;
+		}
+		public void setEnd(int end) {
+			this.end=end;
+		}
+		public String getTime() {
+			return this.time;
+		}
+		public void setTime(String time) {
+			this.time=time;
+		}
+		public String getBusyweeks() {
+			return this.busyweeks;
+		}
+		public void setBusyweeks(String busyweeks) {
+			this.busyweeks=busyweeks;
+		}
+		public MClass build() throws Exception {
+			this.setId(data.getString("id_"));
+			this.setName(data.getString("name_"));
+			this.setTeacher(data.getString("teacher_"));
+			this.setAddress(data.getString("address_"));
+			this.setWeek(data.getString("week_"));
+			this.setDay(data.getInt("day_"));
+			this.setBegin(data.getInt("begin_"));
+			this.setEnd(data.getInt("end_"));
+			this.setTime(data.getString("time_"));
+			this.setBusyweeks(data.getString("busyweeks_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setId(((MClass)data).getId());
+			this.setName(((MClass)data).getName());
+			this.setTeacher(((MClass)data).getTeacher());
+			this.setAddress(((MClass)data).getAddress());
+			this.setWeek(((MClass)data).getWeek());
+			this.setDay(((MClass)data).getDay());
+			this.setBegin(((MClass)data).getBegin());
+			this.setEnd(((MClass)data).getEnd());
+			this.setTime(((MClass)data).getTime());
+			this.setBusyweeks(((MClass)data).getBusyweeks());
+		}
+
+	}
+
+	static public class MCourseList extends Bean2Json<MCourseList> {
+		private static final long serialVersionUID = 1L;
+		private List<MCourse> course = new ArrayList<MCourse>();
+		private String img;
+		public List<MCourse> getCourse() {
+			return this.course;
+		}
+		public void setCourse(List<MCourse> course) {
+			this.course=course;
+		}
+		public String getImg() {
+			return this.img;
+		}
+		public void setImg(String img) {
+			this.img=img;
+		}
+		public MCourseList build() throws Exception {
+			JSONArray jacourse = data.getJSONArray("course_");
+			for(int i = 0, len = jacourse.length(); i < len; i++) {
+				MCourse n = new MCourse();n.setData(jacourse.getJSONObject(i));this.course.add(n);
+			}
+			this.setImg(data.getString("img_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setCourse(((MCourseList)data).getCourse());
+			this.setImg(((MCourseList)data).getImg());
+		}
+
+	}
+
+	static public class MCourse extends Bean2Json<MCourse> {
+		private static final long serialVersionUID = 1L;
+		private String name;
+		private int type;
+		private String grade;
+		private String point;
+		public String getName() {
+			return this.name;
+		}
+		public void setName(String name) {
+			this.name=name;
+		}
+		public int getType() {
+			return this.type;
+		}
+		public void setType(int type) {
+			this.type=type;
+		}
+		public String getGrade() {
+			return this.grade;
+		}
+		public void setGrade(String grade) {
+			this.grade=grade;
+		}
+		public String getPoint() {
+			return this.point;
+		}
+		public void setPoint(String point) {
+			this.point=point;
+		}
+		public MCourse build() throws Exception {
+			this.setName(data.getString("name_"));
+			this.setType(data.getInt("type_"));
+			this.setGrade(data.getString("grade_"));
+			this.setPoint(data.getString("point_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setName(((MCourse)data).getName());
+			this.setType(((MCourse)data).getType());
+			this.setGrade(((MCourse)data).getGrade());
+			this.setPoint(((MCourse)data).getPoint());
+		}
+
+	}
+
+	static public class MTermList extends Bean2Json<MTermList> {
+		private static final long serialVersionUID = 1L;
+		private List<MTerm> term = new ArrayList<MTerm>();
+		private String img;
+		public List<MTerm> getTerm() {
+			return this.term;
+		}
+		public void setTerm(List<MTerm> term) {
+			this.term=term;
+		}
+		public String getImg() {
+			return this.img;
+		}
+		public void setImg(String img) {
+			this.img=img;
+		}
+		public MTermList build() throws Exception {
+			JSONArray jaterm = data.getJSONArray("term_");
+			for(int i = 0, len = jaterm.length(); i < len; i++) {
+				MTerm n = new MTerm();n.setData(jaterm.getJSONObject(i));this.term.add(n);
+			}
+			this.setImg(data.getString("img_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setTerm(((MTermList)data).getTerm());
+			this.setImg(((MTermList)data).getImg());
+		}
+
+	}
+
+	static public class MTerm extends Bean2Json<MTerm> {
+		private static final long serialVersionUID = 1L;
+		private String name;
+		private String url;
+		public String getName() {
+			return this.name;
+		}
+		public void setName(String name) {
+			this.name=name;
+		}
+		public String getUrl() {
+			return this.url;
+		}
+		public void setUrl(String url) {
+			this.url=url;
+		}
+		public MTerm build() throws Exception {
+			this.setName(data.getString("name_"));
+			this.setUrl(data.getString("url_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setName(((MTerm)data).getName());
+			this.setUrl(((MTerm)data).getUrl());
+		}
+
+	}
+
+	static public class MCardList extends Bean2Json<MCardList> {
+		private static final long serialVersionUID = 1L;
+		private List<MCard> card = new ArrayList<MCard>();
+		private String img;
+		public List<MCard> getCard() {
+			return this.card;
+		}
+		public void setCard(List<MCard> card) {
+			this.card=card;
+		}
+		public String getImg() {
+			return this.img;
+		}
+		public void setImg(String img) {
+			this.img=img;
+		}
+		public MCardList build() throws Exception {
+			JSONArray jacard = data.getJSONArray("card_");
+			for(int i = 0, len = jacard.length(); i < len; i++) {
+				MCard n = new MCard();n.setData(jacard.getJSONObject(i));this.card.add(n);
+			}
+			this.setImg(data.getString("img_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setCard(((MCardList)data).getCard());
+			this.setImg(((MCardList)data).getImg());
+		}
+
+	}
+
+	static public class MCard extends Bean2Json<MCard> {
+		private static final long serialVersionUID = 1L;
+		private String name;
+		private String total;
+		private String cost;
+		private String time;
+		public String getName() {
+			return this.name;
+		}
+		public void setName(String name) {
+			this.name=name;
+		}
+		public String getTotal() {
+			return this.total;
+		}
+		public void setTotal(String total) {
+			this.total=total;
+		}
+		public String getCost() {
+			return this.cost;
+		}
+		public void setCost(String cost) {
+			this.cost=cost;
+		}
+		public String getTime() {
+			return this.time;
+		}
+		public void setTime(String time) {
+			this.time=time;
+		}
+		public MCard build() throws Exception {
+			this.setName(data.getString("name_"));
+			this.setTotal(data.getString("total_"));
+			this.setCost(data.getString("cost_"));
+			this.setTime(data.getString("time_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setName(((MCard)data).getName());
+			this.setTotal(((MCard)data).getTotal());
+			this.setCost(((MCard)data).getCost());
+			this.setTime(((MCard)data).getTime());
+		}
+
+	}
+
+	static public class MContactList extends Bean2Json<MContactList> {
+		private static final long serialVersionUID = 1L;
+		private List<MContacts> list = new ArrayList<MContacts>();
+		public List<MContacts> getList() {
+			return this.list;
+		}
+		public void setList(List<MContacts> list) {
+			this.list=list;
+		}
+		public MContactList build() throws Exception {
+			JSONArray jalist = data.getJSONArray("list_");
+			for(int i = 0, len = jalist.length(); i < len; i++) {
+				MContacts n = new MContacts();n.setData(jalist.getJSONObject(i));this.list.add(n);
+			}
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setList(((MContactList)data).getList());
+		}
+
+	}
+
+	static public class MContacts extends Bean2Json<MContacts> {
+		private static final long serialVersionUID = 1L;
+		private String name;
+		private List<MContact> Contact = new ArrayList<MContact>();
+		public String getName() {
+			return this.name;
+		}
+		public void setName(String name) {
+			this.name=name;
+		}
+		public List<MContact> getContact() {
+			return this.Contact;
+		}
+		public void setContact(List<MContact> Contact) {
+			this.Contact=Contact;
+		}
+		public MContacts build() throws Exception {
+			this.setName(data.getString("name_"));
+			JSONArray jaContact = data.getJSONArray("Contact_");
+			for(int i = 0, len = jaContact.length(); i < len; i++) {
+				MContact n = new MContact();n.setData(jaContact.getJSONObject(i));this.Contact.add(n);
+			}
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setName(((MContacts)data).getName());
+			this.setContact(((MContacts)data).getContact());
+		}
+
+	}
+
+	static public class MContact extends Bean2Json<MContact> {
+		private static final long serialVersionUID = 1L;
+		private String name;
+		private String desc;
+		private String[] phone;
+		public String getName() {
+			return this.name;
+		}
+		public void setName(String name) {
+			this.name=name;
+		}
+		public String getDesc() {
+			return this.desc;
+		}
+		public void setDesc(String desc) {
+			this.desc=desc;
+		}
+		public String[] getPhone() {
+			return this.phone;
+		}
+		public void setPhone(String[] phone) {
+			this.phone=phone;
+		}
+		public MContact build() throws Exception {
+			this.setName(data.getString("name_"));
+			this.setDesc(data.getString("desc_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setName(((MContact)data).getName());
+			this.setDesc(((MContact)data).getDesc());
+			this.setPhone(((MContact)data).getPhone());
+		}
+
+	}
+
+	static public class MBusList extends Bean2Json<MBusList> {
+		private static final long serialVersionUID = 1L;
+		private List<MBus> bus = new ArrayList<MBus>();
+		public List<MBus> getBus() {
+			return this.bus;
+		}
+		public void setBus(List<MBus> bus) {
+			this.bus=bus;
+		}
+		public MBusList build() throws Exception {
+			JSONArray jabus = data.getJSONArray("bus_");
+			for(int i = 0, len = jabus.length(); i < len; i++) {
+				MBus n = new MBus();n.setData(jabus.getJSONObject(i));this.bus.add(n);
+			}
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setBus(((MBusList)data).getBus());
+		}
+
+	}
+
+	static public class MBus extends Bean2Json<MBus> {
+		private static final long serialVersionUID = 1L;
+		private String name;
+		private String begin;
+		private String info;
+		private int count;
+		private String process;
+		public String getName() {
+			return this.name;
+		}
+		public void setName(String name) {
+			this.name=name;
+		}
+		public String getBegin() {
+			return this.begin;
+		}
+		public void setBegin(String begin) {
+			this.begin=begin;
+		}
+		public String getInfo() {
+			return this.info;
+		}
+		public void setInfo(String info) {
+			this.info=info;
+		}
+		public int getCount() {
+			return this.count;
+		}
+		public void setCount(int count) {
+			this.count=count;
+		}
+		public String getProcess() {
+			return this.process;
+		}
+		public void setProcess(String process) {
+			this.process=process;
+		}
+		public MBus build() throws Exception {
+			this.setName(data.getString("name_"));
+			this.setBegin(data.getString("begin_"));
+			this.setInfo(data.getString("info_"));
+			this.setCount(data.getInt("count_"));
+			this.setProcess(data.getString("process_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setName(((MBus)data).getName());
+			this.setBegin(((MBus)data).getBegin());
+			this.setInfo(((MBus)data).getInfo());
+			this.setCount(((MBus)data).getCount());
+			this.setProcess(((MBus)data).getProcess());
+		}
+
+	}
+
+	static public class MSignInList extends Bean2Json<MSignInList> {
+		private static final long serialVersionUID = 1L;
+		private String name;
+		private int count;
+		private List<MSignIn> bus = new ArrayList<MSignIn>();
+		public String getName() {
+			return this.name;
+		}
+		public void setName(String name) {
+			this.name=name;
+		}
+		public int getCount() {
+			return this.count;
+		}
+		public void setCount(int count) {
+			this.count=count;
+		}
+		public List<MSignIn> getBus() {
+			return this.bus;
+		}
+		public void setBus(List<MSignIn> bus) {
+			this.bus=bus;
+		}
+		public MSignInList build() throws Exception {
+			this.setName(data.getString("name_"));
+			this.setCount(data.getInt("count_"));
+			JSONArray jabus = data.getJSONArray("bus_");
+			for(int i = 0, len = jabus.length(); i < len; i++) {
+				MSignIn n = new MSignIn();n.setData(jabus.getJSONObject(i));this.bus.add(n);
+			}
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setName(((MSignInList)data).getName());
+			this.setCount(((MSignInList)data).getCount());
+			this.setBus(((MSignInList)data).getBus());
+		}
+
+	}
+
+	static public class MSignIn extends Bean2Json<MSignIn> {
+		private static final long serialVersionUID = 1L;
+		private String time;
+		private String begin;
+		private String end;
+		public String getTime() {
+			return this.time;
+		}
+		public void setTime(String time) {
+			this.time=time;
+		}
+		public String getBegin() {
+			return this.begin;
+		}
+		public void setBegin(String begin) {
+			this.begin=begin;
+		}
+		public String getEnd() {
+			return this.end;
+		}
+		public void setEnd(String end) {
+			this.end=end;
+		}
+		public MSignIn build() throws Exception {
+			this.setTime(data.getString("time_"));
+			this.setBegin(data.getString("begin_"));
+			this.setEnd(data.getString("end_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setTime(((MSignIn)data).getTime());
+			this.setBegin(((MSignIn)data).getBegin());
+			this.setEnd(((MSignIn)data).getEnd());
+		}
+
+	}
+
+	static public class MAccountInfo extends Bean2Json<MAccountInfo> {
+		private static final long serialVersionUID = 1L;
+		private String account;
+		private String password;
+		public String getAccount() {
+			return this.account;
+		}
+		public void setAccount(String account) {
+			this.account=account;
+		}
+		public String getPassword() {
+			return this.password;
+		}
+		public void setPassword(String password) {
+			this.password=password;
+		}
+		public MAccountInfo build() throws Exception {
+			this.setAccount(data.getString("account_"));
+			this.setPassword(data.getString("password_"));
+			return this;
+		}
+		public void build(Bean2Json data) {
+			this.setAccount(((MAccountInfo)data).getAccount());
+			this.setPassword(((MAccountInfo)data).getPassword());
+		}
+
+	}
+
+
+}

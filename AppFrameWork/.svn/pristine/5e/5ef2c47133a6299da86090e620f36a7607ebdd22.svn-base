@@ -1,0 +1,9 @@
+package com.mobile.zsdx.model;
+
+import java.io.Serializable;
+
+import org.json.JSONObject;
+
+public interface Bean2Json<T> extends Serializable {
+	public T build(JSONObject jsonObject) throws Exception;
+}

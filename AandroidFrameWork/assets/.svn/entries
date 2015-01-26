@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://192.168.1.13:8443/svn/frame"
+   revision="2"
+   last-author="liulu"
+   url="https://192.168.1.13:8443/svn/frame/AandroidFrameWork/assets"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2014-07-08T00:47:16.713000Z"/>
+<entry
+   name="01.png"
+   checksum="25f02cb8a8a3ecbd9e13724a93e28daa"
+   last-author="liulu"
+   text-time="2013-12-10T19:45:19.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:36.000000Z"/>
+</wc-entries>

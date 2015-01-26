@@ -1,0 +1,17 @@
+package com.mobile.zsdx.schedule;
+
+import com.mobile.api.proto.MSystem.MAccountInfo;
+
+import android.app.Dialog;
+import android.content.Context;
+
+public class JWLoginDialog extends Dialog {
+	private MAccountInfo ainfo; //账户信息
+	
+	public JWLoginDialog(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+}

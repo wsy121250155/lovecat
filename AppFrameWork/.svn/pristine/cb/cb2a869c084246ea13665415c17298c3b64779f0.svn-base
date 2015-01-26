@@ -1,0 +1,83 @@
+package com.mobile.zsdx.treehole;
+
+import com.mobile.base.MFragment;
+import com.mobile.base.R;
+import com.mobile.base.widget.pullfreshlist.PullToRefreshListView;
+
+import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.TextView;
+
+/*
+ * 树洞的主显示页面
+ */
+public class THMainFragment extends MFragment{
+
+	private PullToRefreshListView listView;
+	
+	private Button topica, topicb, topicc, topicd;
+	
+	private TextView title, commons;
+	
+	private View header;
+	@Override
+	protected void create(Bundle paramBundle) {
+		setContentView(R.layout.treeholefrg);
+		setActionBar();
+		listView = (PullToRefreshListView) findViewById(R.id.thmainlist);
+		//给listview添加header
+		LayoutInflater f = LayoutInflater.from(getContext());
+		header = f.inflate(R.layout.treeholeheader, null);
+        topica = (Button) header.findViewById(R.id.taga);
+        topicb = (Button) header.findViewById(R.id.tagb);
+        topicc = (Button) header.findViewById(R.id.tagc);
+        topicd = (Button) header.findViewById(R.id.tagd);
+		listView.addHeaderView(header);
+		
+	}
+	
+	public void setActionBar(){
+		ActionBar actionBar = ((ActionBarActivity)getContext()).getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(false);
+        
+        ActionBar.LayoutParams layout = new ActionBar.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        layout.gravity = Gravity.RIGHT;
+        LayoutInflater f = LayoutInflater.from(getContext());
+        View view = f.inflate(R.layout.item_treehole_actionbar, null);
+        actionBar.setCustomView(view, layout);
+        view.findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+                getActivity().finish();
+            }
+        });
+        this.title = ((TextView) view.findViewById(R.id.title));
+        this.commons = (TextView) view.findViewById(R.id.commons);
+        this.title.setText("最热");
+        view.findViewById(R.id.create).setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+            	
+            }
+        });
+        this.commons.setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
+		
+	}
+	
+}

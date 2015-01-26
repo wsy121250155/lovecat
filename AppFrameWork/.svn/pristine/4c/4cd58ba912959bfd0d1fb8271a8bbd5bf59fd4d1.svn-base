@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="schedule_week_bg">#ffffd7ff</color>
+    <color name="purple">#a810a6</color>
+    <color name="transparent">#00000000</color>
+    <color name="df_w_color">#fff4f6f3</color>
+    <color name="bt_gray_l">#FFe4e4e4</color>
+    <color name="bt_purple_n">#a810a6</color>
+    <color name="bt_purple_h">#FF5E095D</color>
+    
+    <!-- gray -->
+    <color name="bt_wgray_n">#ffffffff</color>
+    <color name="bt_wgray_p">#FFd8d8d8</color>
+    
+    <!-- green -->
+    <color name="bt_gren_n">#FF4dbcb3</color>
+    <color name="bt_gren_h">#FF3daca3</color>
+    
+    <color name="ck_gren">#eeeeee</color>
+    <color name="ck_gren_h">#A0F384</color>
+</resources>

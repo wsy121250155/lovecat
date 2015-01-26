@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/frame/!svn/ver/2/AandroidFrameWork/res/xml
+END
+api_config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/frame/!svn/ver/10/AandroidFrameWork/res/xml/api_config.xml
+END
+error_config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/frame/!svn/ver/2/AandroidFrameWork/res/xml/error_config.xml
+END
+log_config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/frame/!svn/ver/2/AandroidFrameWork/res/xml/log_config.xml
+END
+base_config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/frame/!svn/ver/10/AandroidFrameWork/res/xml/base_config.xml
+END
+image_config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/frame/!svn/ver/2/AandroidFrameWork/res/xml/image_config.xml
+END
+tools_config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/frame/!svn/ver/2/AandroidFrameWork/res/xml/tools_config.xml
+END

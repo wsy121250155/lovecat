@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:id="@+id/messagerecord"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center">
+        
+        <TextView 
+            android:id="@+id/messageshow"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:text="显示消息内容"/>
+        
+    </LinearLayout>
+
+    <EditText 
+        	android:id="@+id/targetinput"
+        	android:layout_width="match_parent"
+        	android:layout_height="60dp"
+        	android:hint="请输入对方的ID" />
+    
+   	<EditText 
+        	android:id="@+id/chatinput"
+        	android:layout_width="match_parent"
+        	android:layout_height="60dp"
+        	android:hint="请输入聊天内容" />
+   	
+   	<Button 
+   	    android:id="@+id/chatsubmit"
+   	    android:layout_width="200dp"
+   	    android:layout_height="50dp"
+   	    android:text="发送" />
+
+</LinearLayout>

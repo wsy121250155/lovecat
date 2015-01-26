@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="show_trans_name_text_color">#6DEC13</color>
+    <color name="show_trans_num_text_color">#16DFF2</color>
+    <color name="show_trans_tip_text_color">#FFC539</color>
+    <color name="alert_title_text_color">#9B7926</color>
+    <color name="alert_item_text_color">#36F8FF</color>
+    <color name="window_background">#FF191919</color>
+    <color name="menu_dark_background">#00000000</color>
+    <color name="none">#00000000</color>
+    <color name="gray">#808080</color>
+    <color name="alpha_black">#EEEEEEEE</color>
+    <color name="face_black">#000000</color>
+    <color name="face_white">#ffffff</color>
+    <color name="face_red">#800000</color>
+    <color name="face_grap">#ffd7c8</color>
+    <color name="face_zi">#ffc8ff</color>
+    <color name="face_blue">#c8e6ff</color>
+    <color name="select">#ff9000</color>
+    <color name="unselect">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="color_desc">#111111</color>
+    <color name="blue">#1E5FAF</color>
+    <color name="orange">#FF9900</color>
+    <color name="blue_no_focus">#C5E4F9</color>
+    <color name="blue_on_focus">#EDC504</color>
+    <color name="blue_on_press">#71BFED</color>
+    <color name="blue_back">#D6E3EF</color>
+    <color name="blue_text">#56A8DA</color>
+    <color name="timestamp_color">#bf000000</color>
+    <color name="white">#ffffff</color>
+    <color name="t_yallow">#cba300</color>
+    <color name="t_blue_green">#0dd0da</color>
+    <color name="t_green">#adff5e</color>
+    <!-- netshow -->
+    <color name="a_netshow_0">#618AA6</color>
+    <color name="a_netshow_1">#618AA6</color>
+    <color name="a_netshow_2">#ffffff</color>
+    <color name="a_netshow_title">#33DCE1</color>
+    <color name="a_setting_title">#33DCE1</color>
+    <color name="a_blue">#24addd</color>
+    <color name="a_white">#ffffff</color>
+    <color name="a_black">#828282</color>
+    <color name="a_green">#5fa712</color>
+    <color name="a_blue_time_num">#22ADDC</color>
+    <color name="a_sms_body">#22ADDC</color>
+    <color name="a_name_opposite">#ffffff</color>
+    <color name="a_content_opposite">#ffffff</color>
+    <color name="a_name_self">#ffffff</color>
+    <color name="a_content_self">#ffffff</color>
+    <color name="a_name_opposite_focus">#24addd</color>
+    <color name="a_content_opposite_focus">#828282</color>
+    <color name="a_name_self_focus">#5fa712</color>
+    <color name="a_content_self_focus">#828282</color>
+    <color name="a_selected_content">#ffffff</color>
+    <color name="a_selected_number">#ffffff</color>
+    <color name="a_selected_date">#ffffff</color>
+    <color name="a_selected_count">#ffffff</color>
+    <color name="a_selected_name">#ffffff</color>
+    <color name="title_grey">#E7E5E6</color>
+    <color name="text_grey">#A8A8A8</color>
+    <color name="red">#F71600</color>
+    <color name="shadow_black">#2E2E2E</color>
+    <color name="transparent_background">#70000000</color>
+    <color name="transparent_background_help">#75000000</color>
+    <color name="transparent_white">#98FFFFFF</color>
+    <color name="half_transparent">#aa000000</color>
+    <color name="text_orange">#ED7A0E</color>
+    <color name="dark_gray">#636563</color>
+    <color name="somber">#313031</color>
+    <color name="text_somber">#9D9D9D</color>
+    <color name="custqrytab_yes">#FFFFFF</color>
+    <color name="custqrytab_no">#858585</color>
+    <color name="transparent">#00000000</color>
+    <color name="datebottom">#e0ebf1</color>
+
+    <!-- 套餐列表 -->
+    <color name="business_bref">#626262</color>
+    <color name="business_bk">#ebeef5</color>
+    <color name="business_pu">#262626</color>
+    <color name="package_details_spec_value">#575757</color>
+    <color name="highlight">#8ed383</color>
+    <!-- 号码列表 -->
+    <color name="numColor">#272727</color>
+
+    <!-- 客户定位 -->
+    <color name="more_cust_color_in">#fff6c1</color>
+    <color name="more_cust_color_out">#b78e00</color>
+    <color name="add_cust_ok">#008610</color>
+    <color name="check_fail">#ed4300</color>
+
+    <!-- 选号 -->
+    <color name="select_all_num">#bf2d08</color>
+    <color name="num_top">#e1481f</color>
+
+    <!-- 消息中心 -->
+    <color name="message_back">#2d2d2d</color>
+    <color name="message_right">#edeef2</color>
+    <color name="read_old_message_text">#276dd7</color>
+    <color name="message_function_text">#7d7d7d</color>
+    <color name="message_count_name">#747474</color>
+    <color name="message_no_redean_number">#FFFFFF</color>
+    <color name="message_count_right_1">#474747</color>
+    <color name="message_readen">#fffbd7</color>
+    <color name="message_no_readen">#fff6ae</color>
+    <color name="message_detail_1">#920000</color>
+    <color name="message_detail_2">#313131</color>
+    <color name="message_detail_3">#b1b1b1</color>
+    <color name="message_detail_4">#d7d19e</color>
+    <color name="message_detail_5">#767676</color>
+    <color name="message_detail_6">#242424</color>
+    <color name="message_detail_7">#afb0b1</color>
+    <color name="message_detail_8">#f2edc3</color>
+    <color name="message_detail_9">#606060</color>
+    <color name="message_detail_10">#838383</color>
+    <color name="message_detail_11">#b1b1b1</color>
+    <color name="message_detail_12">#474749</color>
+
+    <!-- 主页消息提醒 -->
+    <color name="msg_selected_bg">#ebeef5</color>
+
+    <!-- 成员纳入 -->
+    <color name="member_layout_item">#e9eef4</color>
+    <color name="member_layout_jiange">#cecece</color>
+    <color name="member_layout_reset">#004e9d</color>
+
+    <!-- 选号 -->
+    <color name="manamger_select_num_text">#2c2c2c</color>
+
+    <!-- 规则提示 -->
+    <color name="rule_subs_title_bg">#f2f5f9</color>
+    <color name="rule_content_bg">#dde4ee</color>
+
+    <!-- 客户信息 -->
+    <color name="cust_basic_info_text">#303030</color>
+    <color name="cust_business_item_layout">#e3e9ee</color>
+    <color name="cust_business_item_big_text">#323232</color>
+    <color name="cust_business_item_small_text">#6e6e6e</color>
+    <color name="cust_yue_text">#ff6500</color>
+    <color name="cust_yue2_text">#ced8e1</color>
+    <color name="cust_yue3_text">#e1e8f0</color>
+    <color name="cust_yue4_text">#d1e7f2</color>
+
+    <!-- 购物车 -->
+    <color name="shopcart_bg">#eef2f6</color>
+
+    <!-- 门店列表标题字体颜色 -->
+    <color name="title_default">#282828</color>
+
+    <!-- 门店默认背景色 -->
+    <color name="default_bg_color">#F5F5F5</color>
+    <color name="item_press">#0a5b92</color>
+    <color name="item_default">#0d76bd</color>
+    <color name="noti_item_press">#6d942f</color>
+    <color name="noti_item_default">#8dc03d</color>
+    <color name="grid_dark_background">#EB191919</color>
+    <color name="bubble_dark_background">#00000000</color>
+    <color name="delete_color_filter">#A5FF0000</color>
+    <color name="appwidget_error_color">#FCCC</color>
+    <color name="snag_callout_color">#F444</color>
+    <color name="gesture_color">#ff0563c1</color>
+    <color name="uncertain_gesture_color">#ff848484</color>
+
+    <!-- 统一桌面磁帖背景色 -->
+    <color name="light_brown_posts_color">#f9eedf</color>
+    <color name="pale_yellow_green_posts_color">#934291</color>
+    <color name="pale_dark_blue_posts_color">#325F83</color>
+    <color name="pale_yellow_posts_color">#ECAD00</color>
+    <color name="blue_posts_color">#009edb</color>
+    <color name="red_posts_color">#CF274B</color>
+    <color name="green_posts_color">#339a4b</color>
+    <color name="light_blue_posts_color">#15cbd6</color>
+    <color name="clear_light_blue_posts_color">#a4d3ea</color>
+    <!-- 左侧菜单背景色 -->
+    <color name="left_menu_color">#2d2d2f</color>
+    <color name="menu_item_press_color">#4b4d50</color>
+    <color name="gray_1">#999999</color>
+    <color name="gray_2">#737373</color>
+    <color name="gray_3">#B3B3B3</color>
+    <color name="gray_4">#808080</color>
+    <color name="gray_5">#20333333</color>
+
+    <!-- 设置 -->
+    <color name="exit_default">#0479c0</color>
+    <color name="exit_press">#229ae3</color>
+    <!-- 删除框 -->
+    <color name="del_btn_press">#f5f5f5</color>
+
+    <!-- 风格2 tab -->
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="blue_cursor">#6891c1</color>
+
+    <!-- 登录页 -->
+    <color name="login_default">#065884</color>
+    <color name="login_press">#07649c</color>
+
+</resources>

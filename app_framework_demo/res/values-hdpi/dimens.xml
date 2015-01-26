@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <!-- 4*1 磁贴标题长度限制 -->
+    <dimen name="title_width_41">150dp</dimen>
+
+</resources>

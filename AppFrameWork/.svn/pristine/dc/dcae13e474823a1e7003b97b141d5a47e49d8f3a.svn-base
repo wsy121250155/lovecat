@@ -1,0 +1,46 @@
+package com.mobile.base;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBarActivity;
+import android.telephony.TelephonyManager;
+import android.view.Menu;
+
+import com.mobile.base.util.ConstantResource;
+import com.mobile.zsdx.schedule.ScheduleFragment;
+
+public class MainActivity extends ActionBarActivity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		actionBarInit();
+		
+		FragmentManager fm = getSupportFragmentManager();
+		FragmentTransaction fragmentTransaction = fm.beginTransaction();
+		ScheduleFragment sf = new ScheduleFragment(); 
+		fragmentTransaction.add(R.id.ui_container, sf);
+		sf.setActionBar(getSupportActionBar(), this);
+		
+		fragmentTransaction.commit();
+		
+		ConstantResource.tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+	
+	protected void actionBarInit() {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+    }
+
+}

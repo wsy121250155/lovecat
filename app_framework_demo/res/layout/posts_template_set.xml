@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/left_menu_item"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent_white"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="*长按卡片以添加到首页*"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <com.ailk.ec.unitdesk.ui.widget.PageIndicator
+                android:id="@+id/page_indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:layout_marginBottom="10dp" >
+            </com.ailk.ec.unitdesk.ui.widget.PageIndicator>
+        </LinearLayout>
+
+        <com.ailk.ec.unitdesk.ui.widget.ScrollLayout
+            android:id="@+id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/bottom_layout" >
+        </com.ailk.ec.unitdesk.ui.widget.ScrollLayout>
+    </RelativeLayout>
+
+</LinearLayout>

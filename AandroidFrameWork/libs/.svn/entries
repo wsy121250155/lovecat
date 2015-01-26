@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://192.168.1.13:8443/svn/frame"
+   name=""
+   revision="2"
+   last-author="liulu"
+   url="https://192.168.1.13:8443/svn/frame/AandroidFrameWork/libs"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2014-07-08T00:47:16.713000Z"/>
+<entry
+   name="android-support-v4.jar"
+   checksum="0b72a547a1b0753bc1ff6aefe95a76f4"
+   last-author="liulu"
+   text-time="2014-04-20T05:29:32.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="ksoap2-android-assembly-2.6.0-jar-with-dependencies.jar"
+   checksum="87a9d52b29097425ba97e196981db7aa"
+   last-author="liulu"
+   text-time="2014-06-30T10:50:24.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="nineoldandroids-2.4.0.jar"
+   checksum="016c15ac0e3489d847d40cef513e3a46"
+   last-author="liulu"
+   text-time="2013-09-23T03:55:02.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="picasso-2.3.2.jar"
+   checksum="b1960d88d2325f2a69222c50c225530e"
+   last-author="liulu"
+   text-time="2014-06-24T02:40:28.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:39.000000Z"/>
+<entry
+   name="protobuf-java-2.4.1.jar"
+   checksum="2e9731b7bfdddf2493144383956c692c"
+   last-author="liulu"
+   text-time="2012-04-16T07:54:45.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="zxing.jar"
+   checksum="fc6bb9cb102e52590bb5aaf708a830a5"
+   last-author="liulu"
+   text-time="2013-04-15T02:51:52.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:43.000000Z"/>
+</wc-entries>

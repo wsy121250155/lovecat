@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Panel">
+
+        <!-- Defines panel animation duration in ms. -->
+        <attr name="animationDuration" format="integer" />
+        <!-- Defines panel position on the screen. -->
+        <attr name="position">
+
+            <!-- Panel placed at top of the screen. -->
+            <enum name="top" value="0" />
+            <!-- Panel placed at bottom of the screen. -->
+            <enum name="bottom" value="1" />
+            <!-- Panel placed at left of the screen. -->
+            <enum name="left" value="2" />
+            <!-- Panel placed at right of the screen. -->
+            <enum name="right" value="3" />
+        </attr>
+        <!-- Identifier for the child that represents the panel's handle. -->
+        <attr name="handle" format="reference" />
+        <!-- Identifier for the child that represents the panel's content. -->
+        <attr name="content" format="reference" />
+        <!-- Defines if flying gesture forces linear interpolator in animation. -->
+        <attr name="linearFlying" format="boolean" />
+        <!-- Defines size relative to parent (must be in form: nn%p). -->
+        <attr name="weight" format="fraction" />
+        <!-- Defines opened handle (drawable/color). -->
+        <attr name="openedHandle" format="reference|color" />
+        <!-- Defines closed handle (drawable/color). -->
+        <attr name="closedHandle" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="SmoothButton">
+        <attr name="transitionDrawable" format="reference" />
+        <attr name="transitionDrawableLength" format="integer" />
+        <attr name="transitionTextColorUp" format="color" />
+        <attr name="transitionTextColorDown" format="color" />
+    </declare-styleable>
+    <declare-styleable name="Switcher">
+
+        <!-- Defines switcher animation duration in ms. -->
+        <attr name="animationDuration" />
+        <!-- Defines switcher idle timeout in ms. -->
+        <attr name="idleTimeout" format="integer" />
+        <!-- Defines opened handle (drawable). -->
+        <attr name="decreaseButton" format="reference" />
+        <!-- Defines opened handle (drawable). -->
+        <attr name="increaseButton" format="reference" />
+    </declare-styleable>
+
+    <!-- 滑动刷新 -->
+    <declare-styleable name="PullToRefresh">
+        <attr name="adapterViewBackground" format="reference|color" />
+        <attr name="headerBackground" format="reference|color" />
+        <attr name="headerTextColor" format="color" />
+        <attr name="mode">
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+            <flag name="both" value="0x3" />
+        </attr>
+    </declare-styleable>
+
+    <!-- Orientation of a widget. -->
+    <attr name="direction">
+
+        <!-- Vertical widget. -->
+        <enum name="vertical" value="0" />
+        <!-- Horizontal widget. -->
+        <enum name="horizontal" value="1" />
+    </attr>
+
+    <skip />
+
+    <!--
+         Workspace specific attributes. These attributes are used to customize
+         the workspace in XML files.
+    -->
+    <declare-styleable name="WorkspaceV">
+
+        <!-- The first screen the workspace should display. -->
+        <attr name="defaultScreen" format="integer" />
+    </declare-styleable>
+
+    <!--
+         CellLayout specific attributes. These attributes are used to customize
+         a CellLayout view in XML files.
+    -->
+    <declare-styleable name="CellLayout">
+
+        <!-- The width of a single cell -->
+        <attr name="cellWidth" format="dimension" />
+        <!-- The height of a single cell -->
+        <attr name="cellHeight" format="dimension" />
+        <!-- Padding to apply at the start of the long axis -->
+        <attr name="longAxisStartPadding" format="dimension" />
+        <!-- Padding to apply at the end of the long axis -->
+        <attr name="longAxisEndPadding" format="dimension" />
+        <!-- Padding to apply at the start of the short axis -->
+        <attr name="shortAxisStartPadding" format="dimension" />
+        <!-- Padding to apply at the end of the short axis -->
+        <attr name="shortAxisEndPadding" format="dimension" />
+        <!-- Number of cells on the short axis of the CellLayout -->
+        <attr name="shortAxisCells" format="integer" />
+        <!-- Number of cells on the long axis of the CellLayout -->
+        <attr name="longAxisCells" format="integer" />
+    </declare-styleable>
+
+    <!--
+         DeleteZone specific attributes. These attributes are used to customize
+         a DeleteZone view in XML files.
+    -->
+    <declare-styleable name="DeleteZone">
+
+        <!-- Orientation of the delete zone. -->
+        <attr name="direction" />
+    </declare-styleable>
+
+    <!--
+         HandleView specific attributes. These attributes are used to customize
+         a HandleView view in XML files.
+    -->
+    <declare-styleable name="HandleView">
+
+        <!-- Orientation of the handle. -->
+        <attr name="direction" />
+    </declare-styleable>
+
+    <!--
+         AllAppsGridView specific attributes. These attributes are used to customize
+         the list of all apps in XML files.
+    -->
+    <declare-styleable name="AllAppsGridView">
+
+        <!-- The background texture. -->
+        <attr name="texture" format="reference" />
+    </declare-styleable>
+
+    <!-- XML attributes used by default_workspace.xml -->
+    <declare-styleable name="Favorite">
+        <attr name="className" format="string" />
+        <attr name="packageName" format="string" />
+        <attr name="screen" format="string" />
+        <attr name="x" format="string" />
+        <attr name="y" format="string" />
+    </declare-styleable>
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+        <attr name="orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="debugDraw" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout_LayoutParams">
+        <attr name="layout_newLine" format="boolean" />
+        <attr name="layout_horizontalSpacing" format="dimension" />
+        <attr name="layout_verticalSpacing" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#e8e8e8" android:orientation="vertical">
+
+    <View android:layout_width="fill_parent" android:layout_height="1px" android:layout_marginTop="15dp" android:background="#a8a8a8"/>
+
+    <LinearLayout android:id="@+id/mclayout" android:layout_width="match_parent" android:layout_height="43dp" android:background="@drawable/bt_wgray" android:gravity="center_vertical">
+
+        <TextView android:layout_width="83dp" android:layout_height="30dp" android:gravity="center_vertical" android:paddingLeft="15dp" android:text="@string/mc" android:textColor="#666666" android:textSize="14sp"/>
+
+        <EditText android:id="@+id/mc" android:layout_width="match_parent" android:layout_height="30dp" android:background="@color/transparent" android:gravity="center_vertical" android:hint="@string/hmc" android:textSize="14sp"/>
+    </LinearLayout>
+
+    <View android:layout_width="15dp" android:layout_height="1px" android:background="#ffffff"/>
+
+    <LinearLayout android:id="@+id/lslayout" android:layout_width="match_parent" android:layout_height="43dp" android:background="@drawable/bt_wgray" android:gravity="center_vertical">
+
+        <TextView android:layout_width="83dp" android:layout_height="30dp" android:gravity="center_vertical" android:paddingLeft="15dp" android:text="@string/ls" android:textColor="#666666" android:textSize="14sp"/>
+
+        <EditText android:id="@+id/ls" android:layout_width="match_parent" android:layout_height="30dp" android:background="@color/transparent" android:gravity="center_vertical" android:hint="@string/hls" android:textSize="14sp"/>
+    </LinearLayout>
+
+    <View android:layout_width="fill_parent" android:layout_height="1px" android:layout_marginTop="15dp" android:background="#a8a8a8"/>
+
+    <LinearLayout android:id="@+id/jiaoslayout" android:layout_width="match_parent" android:layout_height="43dp" android:background="@drawable/bt_wgray" android:gravity="center_vertical">
+
+        <TextView android:layout_width="83dp" android:layout_height="30dp" android:gravity="center_vertical" android:paddingLeft="15dp" android:text="@string/js" android:textColor="#666666" android:textSize="14sp"/>
+
+        <EditText android:id="@+id/jiaos" android:layout_width="match_parent" android:layout_height="30dp" android:background="@color/transparent" android:gravity="center_vertical" android:hint="@string/hjs" android:textSize="14sp"/>
+    </LinearLayout>
+
+    <View android:layout_width="15dp" android:layout_height="1px" android:background="#ffffff"/>
+
+    <LinearLayout android:id="@+id/jieslayout" android:layout_width="match_parent" android:layout_height="43dp" android:background="@drawable/bt_wgray" android:gravity="center_vertical">
+
+        <TextView android:layout_width="83dp" android:layout_height="30dp" android:gravity="center_vertical" android:paddingLeft="15dp" android:text="@string/jieshu" android:textColor="#666666" android:textSize="14sp"/>
+
+        <TextView android:id="@+id/jies" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="1" android:gravity="center_vertical" android:textColor="#333333" android:singleLine="true" android:textSize="14sp"/>
+
+        <View android:layout_width="8dp" android:layout_height="12dp" android:layout_marginRight="16dp" android:background="@drawable/icon_arrow"/>
+    </LinearLayout>
+
+    <View android:layout_width="15dp" android:layout_height="1px" android:background="#ffffff"/>
+
+    <LinearLayout android:id="@+id/zhouslayout" android:layout_width="match_parent" android:layout_height="43dp" android:background="@drawable/bt_wgray" android:gravity="center_vertical">
+
+        <TextView android:layout_width="83dp" android:layout_height="30dp" android:gravity="center_vertical" android:paddingLeft="15dp" android:text="@string/zhoushu" android:textColor="#666666" android:textSize="14sp"/>
+
+        <TextView android:id="@+id/zhous" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="1" android:gravity="center_vertical" android:textColor="#333333" android:singleLine="true" android:textSize="14sp"/>
+
+        <View android:layout_width="8dp" android:layout_height="12dp" android:layout_marginRight="16dp" android:background="@drawable/icon_arrow"/>
+    </LinearLayout>
+
+    <View android:layout_width="fill_parent" android:layout_height="1px" android:background="#a8a8a8"/>
+
+</LinearLayout>

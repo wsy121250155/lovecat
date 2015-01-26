@@ -1,0 +1,61 @@
+package com.mobile.zsdx.treehole;
+
+import com.mdx.framework.prompt.SelfUpdateDialog.setProcess;
+import com.mdx.framework.widget.MImageView;
+import com.mobile.base.R;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class TreeHoleItem extends FrameLayout{
+
+	
+	private TextView mtag, mdetail, newCommons;
+	
+	private ImageView mimage, topimage;
+	
+    private Button bcomments;
+    
+    private ImageButton bsecretMail, bmore;
+    
+    private CheckBox bsaygood;
+    
+    private View devidview, allcommons, devidviewend, layout;
+	
+	public TreeHoleItem(Context context) {
+		super(context);
+		init();
+	}
+	
+	public void init(){
+		LayoutInflater lf = LayoutInflater.from(getContext());
+		lf.inflate(R.layout.treeholeitem, this);
+        mtag = (TextView) findViewById(R.id.tag);
+        mdetail = (TextView) findViewById(R.id.detail);
+        mimage = (MImageView) findViewById(R.id.image);
+        topimage = (MImageView) findViewById(R.id.topimage);
+        bsaygood = (CheckBox) findViewById(R.id.saygood);
+        bcomments = (Button) findViewById(R.id.comments);
+        bsecretMail = (ImageButton) findViewById(R.id.secretMail);
+        bmore = (ImageButton) findViewById(R.id.more);
+        devidview = findViewById(R.id.dvidview);
+        allcommons = findViewById(R.id.allCommons);
+        devidviewend = findViewById(R.id.dvidviewend);
+        layout = findViewById(R.id.layout);
+        newCommons = (TextView) findViewById(R.id.newCommons);
+		
+	}
+	
+	public void setdata(){
+		mtag.setText("asd");
+		mdetail.setText("asd");
+	}
+
+}

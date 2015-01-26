@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="scheduleWeekW">30dp</dimen>
+    <dimen name="scheduleWeekh">47dp</dimen>
+    
+    <dimen name="m50dp">50dp</dimen>
+    
+    <dimen name="fancyCoverw">134dp</dimen>
+    <dimen name="fancyCoverh">195dp</dimen>
+    <dimen name="fancyCovers">33dp</dimen>
+</resources>

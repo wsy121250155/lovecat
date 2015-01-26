@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="getphoto_sharephoto">分享照片</string>
+    <string name="getphoto_rephoto">重新拍照</string>
+    <string name="getphoto_choosfile">从文件中选择</string>
+    
+    <string name="getphoto_queren">确认</string>
+    <string name="getphoto_xuanzhuan">旋转</string>
+    <string name="getphoto_quxiao">取消</string>
+
+</resources>

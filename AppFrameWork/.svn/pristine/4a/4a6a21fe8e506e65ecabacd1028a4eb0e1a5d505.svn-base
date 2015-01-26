@@ -1,0 +1,33 @@
+package com.mobile.zsdx.treehole;
+
+import com.mobile.base.R;
+import com.mobile.zsdx.model.Topic;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+
+public class TopicItem extends FrameLayout{
+
+	private TextView tag;
+	
+	private View icon;
+	public TopicItem(Context context) {
+		super(context);
+		init();
+	}
+	private void init(){
+		LayoutInflater lf = LayoutInflater.from(getContext());
+		lf.inflate(R.layout.topicitem, this);
+        tag = (TextView) findViewById(R.id.tag);
+        icon = findViewById(R.id.icon);
+	}
+	
+	public void set(Topic topic){
+		tag.setText(topic.getTitle());
+	}
+	
+
+}

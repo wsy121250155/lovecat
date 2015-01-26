@@ -1,0 +1,132 @@
+package com.mobile.zsdx.model;
+
+import org.json.JSONObject;
+
+public class TreeHoleCommon implements Bean2Json<TreeHoleCommon>{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private String id;
+	
+	private String floor;
+	
+	private String userid;
+	
+	private String replyFloor;
+	
+	private String replyid;
+	
+	private String content;
+	
+	private String time;
+	
+	private String isLz;
+	
+	private String createTime;
+	
+	
+	public String getId() {
+		return id;
+	}
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+
+	public String getFloor() {
+		return floor;
+	}
+
+
+	public void setFloor(String floor) {
+		this.floor = floor;
+	}
+
+
+	public String getUserid() {
+		return userid;
+	}
+
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+
+	public String getReplyFloor() {
+		return replyFloor;
+	}
+
+	public void setReplyFloor(String replyFloor) {
+		this.replyFloor = replyFloor;
+	}
+
+
+	public String getReplyid() {
+		return replyid;
+	}
+
+
+	public void setReplyid(String replyid) {
+		this.replyid = replyid;
+	}
+
+
+	public String getContent() {
+		return content;
+	}
+
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+
+	public String getTime() {
+		return time;
+	}
+
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+
+	public String getIsLz() {
+		return isLz;
+	}
+
+
+	public void setIsLz(String isLz) {
+		this.isLz = isLz;
+	}
+
+
+	public String getCreateTime() {
+		return createTime;
+	}
+
+
+	public void setCreateTime(String createTime) {
+		this.createTime = createTime;
+	}
+
+
+	@Override
+	public TreeHoleCommon build(JSONObject jsonObject) throws Exception {
+		this.setId(jsonObject.getString("id_"));
+		this.setFloor(jsonObject.getString("floor_"));
+		this.setUserid(jsonObject.getString("userid_"));
+		this.setReplyid(jsonObject.getString("replyid_"));
+		this.setReplyFloor(jsonObject.getString("replyFloor_"));
+		this.setContent(jsonObject.getString("content_"));
+		this.setTime(jsonObject.getString("time_"));
+		this.setIsLz(jsonObject.getString("isLz_"));
+		this.setCreateTime(jsonObject.getString("createTime_"));
+		return this;
+	}
+
+}

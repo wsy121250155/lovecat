@@ -1,0 +1,21 @@
+package com.mobile.base.util;
+
+public class ConstantResource {
+	public static int BUFF_SIZE = 2048;	//文件读写缓存区大小
+	private static String[] WEEK_NAMES = {"周一", "周二", "周三", "周四", "周五", "周六", "周日"};
+	
+	/**
+	 * 返回所需周中文名
+	 * @param i
+	 * @return
+	 */
+	public static String getWeekName(int i) {
+		String result = "其他";
+		
+		if(i >= 0 && i < WEEK_NAMES.length) {
+			result = WEEK_NAMES[i];
+		}
+		
+		return result;
+	}
+}

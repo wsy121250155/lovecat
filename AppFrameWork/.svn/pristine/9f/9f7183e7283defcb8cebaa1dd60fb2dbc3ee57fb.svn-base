@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppFrameWork</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="rss">订阅</string>
+    <string name="qbpl">全部评论</string>
+    <!-- 课程表 -->
+    <string name="schedule">课程表</string>
+    <!-- 树洞 -->
+    <string name="rm">热门</string>
+    <string name="tj">推荐</string>
+    <string name="fb">发表</string>
+    <string name="bylzfb">  不以楼主发表</string>
+    <string name="pz">拍照</string>
+    <string name="kbx">(可不选)</string>
+    <string name="xc">相册</string>  
+    <string name="biaoti">#话题</string>
+    <string name="djgh">点击更换</string>
+    <string name="nmfb">匿名发表树洞,不超过120字</string>
+</resources>

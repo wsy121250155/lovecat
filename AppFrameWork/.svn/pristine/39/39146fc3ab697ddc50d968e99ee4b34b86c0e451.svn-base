@@ -1,0 +1,11 @@
+package com.mobile.base.util;
+
+import android.util.Log;
+
+public class MLog {
+	private static String TAG = "com.zsdx";
+	
+	public void d(String msg) {
+		Log.d(TAG, msg);
+	}
+}

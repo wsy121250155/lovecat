@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://192.168.1.13:8443/svn/frame"
+   name=""
+   revision="2"
+   last-author="liulu"
+   url="https://192.168.1.13:8443/svn/frame/AandroidFrameWork/res/color"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2014-07-08T00:47:16.713000Z"/>
+<entry
+   name="vpi__dark_theme.xml"
+   checksum="e5ff7ef87d2fad9bd0c9ffe5bd07a6a1"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"/>
+<entry
+   name="vpi__light_theme.xml"
+   checksum="e38d9e54a97dbd2c9f4303979f57321d"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"/>
+</wc-entries>

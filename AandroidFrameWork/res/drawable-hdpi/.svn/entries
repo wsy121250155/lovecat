@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://192.168.1.13:8443/svn/frame"
+   name=""
+   revision="2"
+   last-author="liulu"
+   url="https://192.168.1.13:8443/svn/frame/AandroidFrameWork/res/drawable-hdpi"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2014-07-08T00:47:16.713000Z"/>
+<entry
+   name="base_pull_list_msg_indicator_arrow_down_drawable.png"
+   checksum="89625c27bfac3837e20bd0309efe0a8f"
+   last-author="liulu"
+   text-time="2014-04-11T09:09:11.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:39.000000Z"/>
+<entry
+   name="camera_autoadjust_filter.png"
+   checksum="2c3b390a7a288c221cb6d36d6f34a78b"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:37.000000Z"/>
+<entry
+   name="camera_blackwhite_filter.png"
+   checksum="5ff65b9390203c6a8ad7c47242e1ba99"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="camera_brightcontrast_filter.png"
+   checksum="febea1b1120bb38da7dfa9de1b93aa64"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:38.000000Z"/>
+<entry
+   name="camera_btn_filter_ped.png"
+   checksum="4cbe7d80ffc98faad836f201ac5113a6"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="camera_btn_takephoto_nor.png"
+   checksum="fd89474589e94fe051b0599f1efc12a6"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:42.000000Z"/>
+<entry
+   name="camera_dialog_down_unselete.9.png"
+   checksum="dea8420fc5fb83a76db3fef2ee286c88"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:36.000000Z"/>
+<entry
+   name="camera_dialog_icon.png"
+   checksum="2d12ba2faf25a999ef876db03efca0fa"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="camera_dialog_up_unselete.9.png"
+   checksum="22487160478c60f8bb481f38d4f0ae6f"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:39.000000Z"/>
+<entry
+   name="camera_feather_filter.png"
+   checksum="e36a13a2008ee4d3f7fa8688fbb28af1"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="camera_filter_review_bg.9.png"
+   checksum="4f56a42fee68226c19a6e463b01e13e2"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:37.000000Z"/>
+<entry
+   name="camera_gallery_select.png"
+   checksum="e4766d739dd801caf857bc8a3c38d1d8"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="camera_gamma_filter.png"
+   checksum="28ef0415256b4c2d57d7e4fa35b037f8"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:36.000000Z"/>
+<entry
+   name="camera_hslmodify_filter_seven.png"
+   checksum="888f6c26109276e617a58ebb898150d1"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="camera_hslmodify_filter_two.png"
+   checksum="6eecf71a07a3e94516c68303bc1f56a9"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="camera_img_watch_bar.png"
+   checksum="73dc54dbb05d6732688fcee82845ad57"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:36.000000Z"/>
+<entry
+   name="camera_light_filter.png"
+   checksum="6b82eaa9bc118b14172b43a63c91a924"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:42.000000Z"/>
+<entry
+   name="camera_nightvision_filter.png"
+   checksum="9bff9b016116bc68c44e60d3b95855e1"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="camera_rainbow_filter.png"
+   checksum="8fcf3bd87bd3996361da6fe72e3153c8"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:38.000000Z"/>
+<entry
+   name="camera_saturationmodity_filter.png"
+   checksum="62e4374297a2e593f929c2d5005c97c0"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:38.000000Z"/>
+<entry
+   name="camera_sepia_filter.png"
+   checksum="862dfc053c43881e03e95cdfb6bf9cf5"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:36.000000Z"/>
+<entry
+   name="camera_vintage_filter.png"
+   checksum="0695dd6a9ea4dd44344940f67a2b8ca0"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="camera_yuantu.png"
+   checksum="35126c8c6f0949a3d36699a8e3726d2a"
+   last-author="liulu"
+   text-time="2014-05-29T11:50:37.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:39.000000Z"/>
+<entry
+   name="cardui_ic_menu_expand_card_dark_normal.png"
+   checksum="1ea0456f1fb97ab2d988422bdf919e6b"
+   last-author="liulu"
+   text-time="2014-06-26T08:02:18.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="cardui_ic_menu_expand_card_dark_pressed.png"
+   checksum="c26c1a1a796e789ad42d1b080d0ee626"
+   last-author="liulu"
+   text-time="2014-06-26T08:02:18.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:36.000000Z"/>
+<entry
+   name="cardui_ic_menu_overflow_card_dark_normal.png"
+   checksum="a27c8168ecc691c6b6d2f713240ce428"
+   last-author="liulu"
+   text-time="2014-06-26T08:02:18.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:37.000000Z"/>
+<entry
+   name="cardui_ic_menu_overflow_card_dark_pressed.png"
+   checksum="5eb0b13bb71c6bbdba3b5d1ce5fadc65"
+   last-author="liulu"
+   text-time="2014-06-26T08:02:18.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:39.000000Z"/>
+<entry
+   name="cardui_ic_menu_overflow_card_rounded_dark_normal.png"
+   checksum="1c6b624f087ee4e9169e66facf3a00b6"
+   last-author="liulu"
+   text-time="2014-06-26T08:02:18.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:42.000000Z"/>
+<entry
+   name="cardui_ic_menu_overflow_card_rounded_dark_pressed.png"
+   checksum="12d9e9e207614758ab7c24857939dfc6"
+   last-author="liulu"
+   text-time="2014-06-26T08:02:18.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="default_image.9.png"
+   checksum="734435b5d897a808927c27e9552910bf"
+   last-author="liulu"
+   text-time="2014-05-15T03:17:09.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:35.000000Z"/>
+<entry
+   name="getphoto_pic_cancle_n.9.png"
+   checksum="e08ae91caa2866843c5db452a7ff47fe"
+   last-author="liulu"
+   text-time="2014-05-29T11:51:26.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:38.000000Z"/>
+<entry
+   name="getphoto_pickpic_n.9.png"
+   checksum="b41b8515ca9629adfe13ae106a967cdc"
+   last-author="liulu"
+   text-time="2014-05-29T11:51:26.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:36.000000Z"/>
+<entry
+   name="pull_refresh_default_indicator_arrow.png"
+   checksum="f0a1a3dbb40fca8022e041d60ddab285"
+   last-author="liulu"
+   text-time="2013-12-27T13:00:52.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="pull_refresh_default_indicator_rotate.png"
+   checksum="de5c9039d457d68d3057c73d9c5bae3f"
+   last-author="liulu"
+   text-time="2013-12-27T13:00:52.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="vpi__tab_selected_focused_holo.9.png"
+   checksum="81849d54187f6b5637de3383acdd9b27"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:37.000000Z"/>
+<entry
+   name="vpi__tab_selected_holo.9.png"
+   checksum="af420f8e621aa16d9bcf86220963233a"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:36.000000Z"/>
+<entry
+   name="vpi__tab_selected_pressed_holo.9.png"
+   checksum="d215404902000751bda9594b96136fc6"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="vpi__tab_unselected_focused_holo.9.png"
+   checksum="2b1056aeca876591f1e5252ef3be0a9b"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:43.000000Z"/>
+<entry
+   name="vpi__tab_unselected_holo.9.png"
+   checksum="d0f48a2eb78312f4f2bf1ba364011b38"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:43.000000Z"/>
+<entry
+   name="vpi__tab_unselected_pressed_holo.9.png"
+   checksum="b2fe0fbcb4c4b30f4992e2b1bef907f8"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:43.000000Z"/>
+</wc-entries>

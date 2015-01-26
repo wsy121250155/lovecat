@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f4f4f4" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_top_height"
+        android:background="@drawable/posts_topbar" >
+
+        <LinearLayout
+            android:id="@+id/back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:onClick="back"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/back_button"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="软件分享"
+            android:textColor="#494949"
+            android:textSize="@dimen/common_top_title_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_layout"
+        android:gravity="center_horizontal"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="17dp" >
+
+        <LinearLayout
+            android:id="@+id/contact_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#dedee0"
+            android:padding="1dp" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/contact_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:text="收件人:"
+                    android:textColor="#4e515e"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:id="@+id/pick_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_for_del_dialog"
+                    android:gravity="center_vertical"
+                    android:onClick="pickContact"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_find_contact"
+                        android:clickable="false" />
+                </LinearLayout>
+
+                <com.ailk.ec.unitdesk.ui.widget.FlowLayout
+                    xmlns:f="http://schemas.android.com/apk/res/com.ailk.ec.unitdesk"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/contact_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toLeftOf="@id/pick_contact"
+                    android:layout_toRightOf="@id/contact_tip"
+                    android:orientation="vertical"
+                    f:horizontalSpacing="6dp"
+                    f:verticalSpacing="6dp" >
+
+                    <EditText
+                        android:id="@+id/contact"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/transparent"
+                        android:paddingLeft="5dp"
+                        android:textColor="#4e515e"
+                        android:textSize="17sp" />
+                </com.ailk.ec.unitdesk.ui.widget.FlowLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/contact_layout"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="分享内容"
+                    android:textColor="#4e515e"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:background="#dedee0"
+                android:padding="1dp" >
+
+                <EditText
+                    android:id="@+id/share_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:gravity="top|left"
+                    android:hint="分享内容"
+                    android:maxLength="200"
+                    android:padding="10dp"
+                    android:textColor="#4e515e"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/exit_btn"
+                android:onClick="share"
+                android:text="分享"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/instance_contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/contact_layout"
+            android:layout_gravity="center"
+            android:background="#f4f4f4"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/list_divide_line"
+            android:fadingEdge="none"
+            android:scrollingCache="false"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <!-- 设置界面 -->
+    <dimen name="x_large_text_size">30sp</dimen>
+    <dimen name="xx_large_text_size">40sp</dimen>
+    <dimen name="m_middle_text_size">11sp</dimen>
+    <dimen name="hl_middle_text_size">28sp</dimen>
+
+    <!-- 首页 -->
+    <!-- <dimen name="drag_lay_pading_top">15dp</dimen> -->
+    <dimen name="drag_lay_pading_left">5dp</dimen>
+    <dimen name="drag_lay_margin_right">10dp</dimen>
+    <dimen name="work_space_margin">5dp</dimen>
+    <dimen name="menu_layout_padding_right">15dp</dimen>
+    <dimen name="menu_layout_padding_bottom">45dp</dimen>
+    <dimen name="menu_padding">18dp</dimen>
+    <dimen name="top_title_height">54dp</dimen>
+    <dimen name="left_menu_width">100dp</dimen>
+    <dimen name="cate_ic_margin_left">10dp</dimen>
+    <dimen name="template_work_space_margin">20dp</dimen>
+    <dimen name="posts_content_margin_left_top">5dp</dimen>
+
+    <!-- 磁铁 -->
+    <dimen name="posts_height">100dp</dimen>
+    <dimen name="cate_top_height">45dp</dimen>
+    <dimen name="template_height">120dp</dimen>
+
+    <!-- 字体大小 -->
+    <dimen name="h_large_text_size">22sp</dimen>
+    <dimen name="xm_large_text_size">18sp</dimen>
+    <dimen name="m_large_text_size">16sp</dimen>
+    <dimen name="x_middle_text_size">12sp</dimen>
+    <dimen name="l_large_text_size">13sp</dimen>
+    <dimen name="common_top_title_text_size">19sp</dimen>
+
+    <!-- 登录界面 -->
+    <dimen name="choose_pwd_marginTop">34dp</dimen>
+    <dimen name="login_area_margin">23dp</dimen>
+
+    <!-- 主页 -->
+    <dimen name="dialog_margin">27dp</dimen>
+    <dimen name="common_top_height">54dp</dimen>
+
+    <!-- 风格2 tab -->
+    <dimen name="drag_lay_pading_left_2">5dp</dimen>
+    <dimen name="work_space_pading_top">10dp</dimen>
+    <!-- 分类编辑 -->
+    <dimen name="cate_edit_height">40dp</dimen>
+    <!-- 4*1 磁贴标题长度限制 -->
+    <dimen name="title_width_41">200dp</dimen>
+
+</resources>

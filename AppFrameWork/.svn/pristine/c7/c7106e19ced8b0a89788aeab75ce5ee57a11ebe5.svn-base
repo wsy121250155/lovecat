@@ -1,0 +1,35 @@
+package com.mobile.zsdx.treehole;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+
+import com.mobile.api.proto.MAppTreeHole.MComment;
+import com.mobile.base.R;
+
+public class THCommons extends FrameLayout{
+
+    private TextView num, callback, detail, time;
+    private View icon;
+	public THCommons(Context context) {
+		super(context);
+		init();
+	}
+	
+	private void init(){
+		LayoutInflater lf = LayoutInflater.from(getContext());
+		lf.inflate(R.layout.treeholecommons, this);
+        num=(TextView) findViewById(R.id.num);
+        callback=(TextView) findViewById(R.id.callback);
+        detail=(TextView) findViewById(R.id.detail);
+        time=(TextView) findViewById(R.id.time);
+        icon=findViewById(R.id.icon);
+	}
+	
+	public void setdata(MComment data){
+		
+	}
+
+}

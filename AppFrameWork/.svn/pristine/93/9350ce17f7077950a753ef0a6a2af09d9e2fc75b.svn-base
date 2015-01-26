@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/pl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/default_bt_background_wight"
+            android:gravity="center" >
+
+            <View
+                android:layout_width="21dp"
+                android:layout_height="18dp"
+                android:background="@drawable/icon_message" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/pl"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/plnum"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_logc_ml_p"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sx"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bt_background_gray"
+            android:gravity="center" >
+
+            <View
+                android:layout_width="21dp"
+                android:layout_height="18dp"
+                android:background="@drawable/icon_mail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/sx"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sxnum"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_logc_ml_p"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.mobile.base.widget.pullfreshlist.PullToRefreshListView
+        android:id="@+id/listviewpl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:cacheColorHint="@color/transparent"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none" >
+    </com.mobile.base.widget.pullfreshlist.PullToRefreshListView>
+
+    <com.mobile.base.widget.pullfreshlist.PullToRefreshListView
+        android:id="@+id/listviewsx"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:cacheColorHint="@color/transparent"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:visibility="gone" >
+    </com.mobile.base.widget.pullfreshlist.PullToRefreshListView>
+
+</LinearLayout>

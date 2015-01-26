@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.mdx.mobileuniversity.MainActivity$PlaceholderFragment" >
+
+    <com.mdx.framework.widget.MImageView
+        android:id="@+id/topimage"
+        android:layout_width=" 320dp"
+        android:layout_height=" 220dp"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft=" 15dp"
+        android:layout_marginRight=" 15dp"
+        android:layout_marginTop=" 10dp"
+        android:gravity="right"
+        android:textColor="#a810a6"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom=" 12dp"
+        android:layout_marginLeft=" 15dp"
+        android:layout_marginRight=" 15dp"
+        android:layout_marginTop=" 8dp"
+        android:textColor="#232323"
+        android:textSize="15sp" />
+
+    <com.mdx.framework.widget.MImageView
+        android:id="@+id/image"
+        style="@style/treehold_image_style"
+        android:layout_marginBottom=" 3dp"
+        android:layout_marginLeft=" 15dp"
+        android:layout_marginRight=" 15dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/hello_world" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d8d8d8" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height=" 40dp"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/saygood"
+            android:layout_width="wrap_content"
+            android:layout_height=" 40dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:button="@null"
+            android:drawableLeft="@drawable/ck_th_heart"
+            android:gravity="center"
+            android:paddingLeft=" 20dp"
+            android:paddingRight=" 8dp"
+            android:textColor="#d8d8d8"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height=" 25dp"
+            android:layout_marginLeft="-1px"
+            android:background="#d8d8d8" />
+
+        <Button
+            android:id="@+id/comments"
+            android:layout_width="wrap_content"
+            android:layout_height=" 40dp"
+            android:layout_weight="1"
+            android:background="@drawable/default_bt_background_wight"
+            android:drawableLeft="@drawable/ic_th_comment"
+            android:paddingLeft=" 20dp"
+            android:paddingRight=" 8dp"
+            android:textColor="#d8d8d8"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height=" 25dp"
+            android:layout_marginLeft="-1px"
+            android:background="#d8d8d8" />
+
+        <ImageButton
+            android:id="@+id/secretMail"
+            android:layout_width="wrap_content"
+            android:layout_height=" 40dp"
+            android:layout_weight="1"
+            android:background="@drawable/default_bt_background_wight"
+            android:contentDescription="@string/abc_action_bar_home_description"
+            android:paddingLeft=" 8dp"
+            android:paddingRight=" 8dp"
+            android:src="@drawable/icon_mail" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height=" 25dp"
+            android:layout_marginLeft="-1px"
+            android:background="#d8d8d8" />
+
+        <ImageButton
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height=" 40dp"
+            android:layout_weight="1"
+            android:background="@drawable/default_bt_background_wight"
+            android:contentDescription="@string/abc_action_bar_home_description"
+            android:paddingLeft=" 8dp"
+            android:paddingRight=" 8dp"
+            android:src="@drawable/bt_th_more" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/newCommons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding=" 10dp"
+        android:textColor="#ee0000"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d8d8d8" />
+
+    <View
+        android:id="@+id/margin"
+        android:layout_width="match_parent"
+        android:layout_height=" 8dp"
+        android:background="@color/df_w_color"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/dvidview"
+        android:layout_width="match_parent"
+        android:layout_height=" 10dp"
+        android:background="#eeeeee"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/allCommons"
+        android:layout_width="match_parent"
+        android:layout_height=" 27dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft=" 8dp"
+        android:text="@string/qbpl"
+        android:textColor="#9d9d9d"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/dvidviewend"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d8d8d8"
+        android:visibility="gone" />
+
+</LinearLayout>

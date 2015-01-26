@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <ScrollView
+        android:id="@+id/schedule_scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/schedule_header"
+        android:layout_marginTop="-1px"
+        android:scrollbars="none" >
+    </ScrollView>
+    
+    <LinearLayout
+        android:id="@+id/schedule_header"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="#d8d8d8">
+        
+        <TextView 
+            android:id="@+id/weekdFirst"
+            style="@style/tv_schedule_f"
+            android:layout_width="@dimen/scheduleWeekW"
+            android:layout_height="fill_parent"  />
+        
+        <TextView 
+            android:id="@+id/weekd1"
+            style="@style/tv_schedule_f"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        
+        <TextView 
+            android:id="@+id/weekd2"
+            style="@style/tv_schedule_f"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        
+        <TextView 
+            android:id="@+id/weekd3"
+            style="@style/tv_schedule_f"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        
+        <TextView 
+            android:id="@+id/weekd4"
+            style="@style/tv_schedule_f"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        
+        <TextView 
+            android:id="@+id/weekd5"
+            style="@style/tv_schedule_f"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        
+        <TextView 
+            android:id="@+id/weekd6"
+            style="@style/tv_schedule_f"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        
+        <TextView 
+            android:id="@+id/weekd7"
+            style="@style/tv_schedule_f"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/addbutton"
+        android:layout_width="88dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bt_schedule" />
+
+</RelativeLayout>

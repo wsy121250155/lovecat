@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">直通一线</string>
+    <string name="desktop_patch_url">http://218.94.119.18:8000/Release_desktop/apk/Win_Desktop.patch</string>
+    <!-- <string name="PORTAL_YIURL">http://61.160.128.44/unitydeskportal/ac.se</string> -->
+    <!-- 生产地址 -->
+    <string name="PORTAL_YIURL">http://61.160.128.49/unideskportal/ac.se</string>
+    <!-- 测试地址 -->
+    <!-- <string name="PORTAL_YIURL">http://218.94.119.18:8000/unitydeskportal/ac.se</string> -->
+    <string name="dim_code_unidesk">http://61.160.128.49/images/UniDesk.png</string>
+    <!--
+    <string name="desktop_url">http://218.94.119.18:8000/UniDesk/Android</string>
+    <string name="desktop_apk_url">http://218.94.119.18:8000/UniDesk/Android/UniDesk.apk</string>
+    -->
+
+    <string name="test_desktop_url">http://61.160.128.49/Android/Test</string>
+    <string name="test_desktop_apk_url">http://61.160.128.49/Android/Test/UniDesk.apk</string>
+    <string name="desktop_url">http://61.160.128.49/Android</string>
+    <string name="desktop_apk_url">http://61.160.128.49/Android/UniDesk.apk</string>
+    <string name="share_apk_url">http://61.160.128.49/mDownload.html</string>
+    <string name="versionXmlUrl">/version.xml</string>
+    <string name="CONNECTION_TIMEOUT">10000</string>
+    <!-- <string name="SOCKET_TIMEOUT">90000</string> -->
+    <string name="SOCKET_TIMEOUT">20000</string>
+
+    <!-- XML文件地址 -->
+    <!-- <string name="versionXmlUrl">/apk/version.xml</string> -->
+    <string name="exitTitle">退出</string>
+    <string name="exitMessage">是否退出软件?</string>
+    <string name="search">请输入关键字</string>
+    <string name="strInputAccTelHint">号码前面请加区号</string>
+    <string name="strInputAccHint">号码或帐号</string>
+    <string name="strPswHint">客户密码或产品密码</string>
+    <string name="strSelectTypeHint">选择产品类型</string>
+    <string name="strSelectType">类型</string>
+    <string name="strAccInputLabel">帐号</string>
+    <string name="strPswInputLabel">密码</string>
+    <string name="opt_remember">记住密码</string>
+    <string name="login">登 录</string>
+    <string name="systemTitle">提示</string>
+    <string name="systemUpDateTitle">版本更新</string>
+    <string name="systemBackTitle">退出</string>
+    <string name="netLinkErrorText">网络连接失败,请设置可用网络.</string>
+    <string name="softwareUpdateText">您是否升级最新版本程序?</string>
+    <string name="softwareBackTitle">是否退出软件?</string>
+    <string name="ok">确认</string>
+    <string name="update">更新</string>
+    <string name="cancel">取消</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="logout_title">注销</string>
+    <string name="logout_tip">是否注销应用?</string>
+    <string name="businessAccepted">业务已提交受理,我们会尽快为您审核!</string>
+    <string name="businessError">业务已受理,正在审核中</string>
+    <string name="pwdUpdateMsg">修改密码成功,请牢记您的新密码!</string>
+    <string name="preInputIdCard">请输入您的身份证号码</string>
+    <string name="preInputEnd">输入您想要号码的1-4位尾号</string>
+    <string name="feedback">意见反馈</string>
+    <string name="feedback1">意见反馈：</string>
+    <string name="feedbackSuccess">您的建议已提交成功!</string>
+    <string name="confirmRecharge">是否确认充值?</string>
+    <string name="loadingtext">数据载入中，请稍候！</string>
+    <string name="loadingnoacctext">请正确输入您的账号</string>
+    <string name="loadingnopwdtext">密码不能为空</string>
+    <string name="loadingnoselecttype">请选择产品类型</string>
+    <string name="prodchoicehelp">您采用的产品密码登录不能进行产品切换，请用客户密码重新登录，如有疑问请咨询10000</string>
+
+    <!-- 门店基本信息 -->
+    <string name="obtain_coord">点击获取坐标</string>
+    <string name="re_obtain">重新获取</string>
+    <string name="verify_or_obtain">验证或重新获取</string>
+    <string name="obtain_loading">正在获取中</string>
+    <!-- 桌面主页 -->
+    <string name="home_title">江苏电信直通一线</string>
+    <string name="edit_home_page">编辑首页</string>
+    <string name="refresh">刷新</string>
+    <string name="edit_desktop">编辑桌面</string>
+    <string name="word_posts">磁贴</string>
+    <string name="category">分类</string>
+    <string name="add_category_title">添加分类</string>
+    <string name="del_inst_tip">将删除磁贴,确认继续么?</string>
+    <string name="del_cate_tip">将删除分类,确认继续么?</string>
+    <string name="del_cate_inst_tip">将删除分类下所有磁贴,确认继续么?</string>
+    <!-- 添加分类 -->
+    <string name="add_new_cate_tip">添加新分类</string>
+    <string name="add_new_cate_hint">请输入分类名称</string>
+    <string name="confirm_add">新增</string>
+
+    <!-- CameraPlugin -->
+    <string name="camera_layout_sure">确定</string>
+    <string name="camera_layout_retry">重试</string>
+    <string name="camera_layout_move_and_zoom">移动和缩放</string>
+    <!-- 温馨提示 -->
+    <string name="manu_uninstall">哎呀,老版本没有成功卸载,请手动卸载哦</string>
+    <string name="push_log_tip">系统推荐卡片在此显示,可以将其添加到分类里哦</string>
+    <!-- 账号绑定提示 -->
+    <string name="binding_title">绑定账号</string>
+
+    <!-- 门户层编码 -->
+    <string name="PORTAL_LOGIN_VERIFY">PORTAL_LOGIN_VERIFY</string>
+    <!-- 绑定手机开店账号 -->
+    <string name="UNIDESK_ACTION_EM_VERIFY_NUM_PASSWD">UNIDESK_ACTION_EM_VERIFY_NUM_PASSWD</string>
+    <!-- 未读消息 -->
+    <!-- <string name="UNIDESK_ACTION_GET_MSG_UR_NUM">UNIDESK_ACTION_GET_MSG_UR_NUM</string> -->
+    <string name="UNIDESK_ACTION_GET_NO_READ_SUM">UNIDESK_ACTION_GET_NO_READ_SUM</string>
+
+    <!-- 公告 -->
+    <string name="UNIDESK_ACTION_GET_NT_NUM">UNIDESK_ACTION_GET_NT_NUM</string>
+    <string name="UNIDESK_GET_TASK_COUNT_BY_USERID">SERV_UNIDESK_GET_TASK_COUNT_BY_USERID</string>
+    <string name="UNIDESK_ACTION_GET_MAIL_NUM">UNIDESK_ACTION_GET_MAIL_NUM</string>
+    <string name="UNIDESK_ACTION_GET_MAIL_LIST">UNIDESK_ACTION_GET_MAIL_LIST</string>
+    <!-- 意见反馈 -->
+    <string name="UNIDESK_ACTION_FEED_BACK">UNIDESK_ACTION_FEED_BACK</string>
+    <!-- 登录日志 -->
+    <string name="UNIDESK_ACTION_USER_LOGIN_LOG">UNIDESK_ACTION_USER_LOGIN_LOG</string>
+    <!-- 访问磁贴日志 -->
+    <string name="UNIDESK_ACTION_USER_VISIT_TEMPLATE_LOG">UNIDESK_ACTION_USER_VISIT_TEMPLATE_LOG</string>
+    <string name="UNIDESK_ACTION_ERROR_LOG">UNIDESK_ACTION_ERROR_LOG</string>
+    <!-- 获取token -->
+    <string name="SERV_UNIDESK_ACTION_GET_UNIFIED_LOGIN">SERV_UNIDESK_ACTION_GET_UNIFIED_LOGIN</string>
+    <!-- 获取所有配置信息 -->
+    <string name="DESKCFG_ACTION_QUERY_PAGE_CONFIG">DESKCFG_ACTION_QUERY_PAGE_CONFIG</string>
+    <!-- 配置信息(更新,删除) -->
+    <string name="DESKCFG_ACTION_DELETE_AND_UPDATE">DESKCFG_ACTION_DELETE_AND_UPDATE</string>
+    <!-- 搜索模板 -->
+    <string name="DESKCFG_ACTION_SEARCH_FUNC_TEMP">DESKCFG_ACTION_SEARCH_FUNC_TEMP</string>
+    <!-- 查询推荐磁贴 -->
+    <string name="DESKCFG_ACTION_QUERY_PUSH_INFO">DESKCFG_ACTION_QUERY_PUSH_INFO</string>
+    <!-- 保存登录用户信息 -->
+    <string name="UNIDESK_ACTION_SAVE_USER_KEY">UNIDESK_ACTION_SAVE_USER_KEY</string>
+    <!-- 添加分类 -->
+    <string name="DESKCFG_ACTION_ADD_CATEGORY">DESKCFG_ACTION_ADD_CATEGORY</string>
+    <!-- 添加磁贴 -->
+    <string name="DESKCFG_ACTION_ADD_GROUP_INST">DESKCFG_ACTION_ADD_GROUP_INST</string>
+    <!-- 获取模板类别 -->
+    <string name="DESKCFG_ACTION_QUERY_ALL_TEMP_TYPE">DESKCFG_ACTION_QUERY_ALL_TEMP_TYPE</string>
+    <!-- 获取模板实例 -->
+    <string name="DESKCFG_ACTION_QUERY_TEMP_WITH_INST_TYPE">DESKCFG_ACTION_QUERY_TEMP_WITH_INST_TYPE</string>
+    <!-- 标记已读 -->
+    <string name="DESKCFG_ACTION_ADD_FUNC_TEMP_LOGS">DESKCFG_ACTION_ADD_FUNC_TEMP_LOGS</string>
+    <!-- 应用推荐磁贴 -->
+    <string name="DESKCFG_ACTION_APPLY_PUSH_INFO">DESKCFG_ACTION_APPLY_PUSH_INFO</string>
+    <!-- 写日志 -->
+    <string name="DESKCFG_ACTION_ADD_PUSH_LOG">DESKCFG_ACTION_ADD_PUSH_LOG</string>
+    <!-- 代办任务 -->
+    <string name="UNIDESK_ACTION_QUERY_TASK_LIST_BY_PARAMS">UNIDESK_ACTION_QUERY_TASK_LIST_BY_PARAMS</string>
+    <!-- 更新桌面风格 -->
+    <string name="DESKCFG_ACTION_UPDATE_PAGE_CONFIG_STYLE_TYPE">DESKCFG_ACTION_UPDATE_PAGE_CONFIG_STYLE_TYPE</string>
+    <!-- 发送短信 -->
+    <string name="UNIDESK_ACTION_SMS_SEND">UNIDESK_ACTION_SMS_SEND</string>
+    <!-- 是否更新接口 -->
+    <string name="UNIDESK_ACTION_UPGRADE">UNIDESK_ACTION_UPGRADE</string>
+    <!-- 获取Uname -->
+    <string name="UNIDESK_ACTION_GET_UNAME">UNIDESK_ACTION_GET_UNAME</string>
+
+</resources>

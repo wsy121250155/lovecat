@@ -1,0 +1,20 @@
+package com.mobile.base.http;
+
+import android.content.Context;
+
+import com.mobile.zsdx.model.NewsList;
+
+public class ApiClientFactory {
+	public static void getNewsListApi(Context context, Object controller, String methodName, int page, int limit) {
+		ApiClient client = new ApiClient();
+		
+		ParamsFormat pf = ParamsFormatFactory.getParamsFormat("MNewsList", page, limit);
+		
+		NewsList list = new NewsList(); 
+		
+		client.setPf(pf);	//传递参数
+		client.setB2jData(list); //填充数据
+		
+		client.getApiData(context, controller, methodName);
+	}
+}

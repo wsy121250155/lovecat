@@ -1,0 +1,123 @@
+package com.mobile.base.http;
+
+import org.apache.http.Header;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import android.content.Context;
+import android.text.TextUtils;
+import android.widget.Toast;
+
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.mobile.base.util.ConstantResource;
+import com.mobile.base.util.MLog;
+import com.mobile.zsdx.model.Bean2Json;
+
+public class MJsonResponseHandler extends JsonHttpResponseHandler {
+	private Context context;
+	private int errorCode;
+	private String errorMsg;
+	private Bean2Json b2jData;
+	private Object controller;
+	private String methodName;
+	
+	public MJsonResponseHandler(Context context, Object controller, Bean2Json b2jData, String methodName) {
+		super();
+		this.context = context;
+		this.b2jData = b2jData;
+		this.controller = controller;
+		this.methodName = methodName;
+	}
+	
+	public void json2Info(JSONObject response) throws Exception {
+		this.setErrorCode(response.getInt("errorCode"));
+		this.setErrorMsg(response.getString("errorMsg"));
+	}
+
+	@Override
+    public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+        // If the response is JSONObject instead of expected JSONArray
+		try {
+			json2Info(response);
+			if(errorCode != 0 && !TextUtils.isEmpty(errorMsg))
+				Toast.makeText(getContext(), errorMsg, Toast.LENGTH_SHORT).show();
+			else if(errorCode == 0) {
+				b2jData.build(response);
+				MLog.d(b2jData.toString());
+				//调用回调函数
+				controller.getClass().getMethod(methodName, Bean2Json.class).invoke(controller, b2jData);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			MLog.d(controller.getClass().getSimpleName() + "" + e.getClass().getName());
+ 		}
+    }
+    
+    @Override
+    public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
+        // Pull out the first event on the public timeline
+		try {
+			onSuccessHandle(timeline);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			MLog.d(e.getMessage());
+		}
+    }
+    
+    @Override
+    public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+    	Toast.makeText(getContext(), ConstantResource.NET_ERROR, Toast.LENGTH_SHORT).show();
+    	try {
+			onFailureHandle();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			MLog.d(e.getMessage());
+		}
+    }
+    
+    public Context getContext() {
+		return context;
+	}
+
+	public void setContext(Context context) {
+		this.context = context;
+	}
+	
+	public void onSuccessHandle(JSONObject response) throws Exception {
+		
+	}
+
+	public void onSuccessHandle(JSONArray timeline) throws Exception {
+		
+	}
+	
+	public void onFailureHandle() throws Exception {
+		
+	}
+
+	public int getErrorCode() {
+		return errorCode;
+	}
+
+	public void setErrorCode(int errorCode) {
+		this.errorCode = errorCode;
+	}
+
+	public String getErrorMsg() {
+		return errorMsg;
+	}
+
+	public void setErrorMsg(String errorMsg) {
+		this.errorMsg = errorMsg;
+	}
+
+	public Bean2Json getB2jData() {
+		return b2jData;
+	}
+
+	public void setB2jData(Bean2Json b2jData) {
+		this.b2jData = b2jData;
+	}
+	
+	
+}

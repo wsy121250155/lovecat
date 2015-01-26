@@ -1,0 +1,88 @@
+package com.mobile.zsdx.rss;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mobile.zsdx.model.Bean2Json;
+import com.mobile.zsdx.model.Rss;
+import com.mobile.zsdx.model.RssList;
+import com.mobile.base.R;
+import com.mobile.base.http.ApiClientFactory;
+import com.mobile.base.widget.pullfreshlist.PullToRefreshBase;
+import com.mobile.base.widget.pullfreshlist.PullToRefreshBase.Mode;
+import com.mobile.base.widget.pullfreshlist.PullToRefreshBase.OnPullEventListener;
+import com.mobile.base.widget.pullfreshlist.PullToRefreshBase.State;
+import com.mobile.base.widget.pullfreshlist.PullToRefreshListView;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBar.LayoutParams;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ListView;
+import android.widget.Toast;
+/**
+ * 
+ * @author liang
+ *
+ */
+public class RSSActivity extends ActionBarActivity{
+	
+	private PullToRefreshListView listView;
+	private List<Rss> list ;
+	private RSSAdapter adapter;
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.rssmainlist);
+		listView=(PullToRefreshListView) findViewById(R.id.rssmainlist);
+		list=new ArrayList<Rss>();
+		adapter=new RSSAdapter(list, this);
+		ApiClientFactory.getRssList(this, RSSActivity.this, "getList", 1, 20);
+		listView.setAdapter(adapter);
+		listView.setOnPullEventListener(new OnPullEventListener<ListView>() {
+
+			@Override
+			public void onPullEvent(PullToRefreshBase<ListView> refreshView,
+					State state, Mode direction) {
+				if(state.equals(State.RELEASE_TO_REFRESH)){
+				}
+			}
+		});
+		setActionBar();
+	}
+	
+	@SuppressWarnings("rawtypes")
+	public void getList(Bean2Json list){
+		this.list.addAll((RssList)list);
+		Toast.makeText(this, "执行到了", 0).show();
+		adapter.notifyDataSetChanged();
+	}
+	
+	private void setActionBar(){
+		ActionBar actionBar=getSupportActionBar();
+		actionBar.setDisplayShowHomeEnabled(false);
+		actionBar.setTitle("订阅");
+        //actionBar.setDisplayHomeAsUpEnabled(false);
+        //actionBar.setDisplayShowTitleEnabled(false);
+        //actionBar.setDisplayShowHomeEnabled(false);
+		LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+		LayoutInflater f=LayoutInflater.from(RSSActivity.this);
+		layoutParams.gravity=Gravity.RIGHT;
+		View view=f.inflate(R.layout.rssheader, null);
+		
+		view.findViewById(R.id.torsslist).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent i=new Intent(RSSActivity.this,RSSSelectActivity.class);
+				startActivity(i);
+			}
+		});
+		actionBar.setCustomView(view,layoutParams);
+
+	}
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.ailk.ec.unitdesk.ui2.widget.ElasticScrollView2
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/cate_llayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="@dimen/drag_lay_pading_left_2"
+            android:paddingRight="@dimen/drag_lay_margin_right"
+            android:paddingTop="@dimen/work_space_pading_top"
+            android:background="@color/transparent"
+            android:orientation="vertical" >
+
+            <com.ailk.ec.unitdesk.ui2.widget.PostsViewGroup2
+                android:id="@+id/posts_llayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </com.ailk.ec.unitdesk.ui2.widget.PostsViewGroup2>
+        </LinearLayout>
+    </com.ailk.ec.unitdesk.ui2.widget.ElasticScrollView2>
+
+</RelativeLayout>

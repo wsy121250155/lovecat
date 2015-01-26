@@ -1,0 +1,61 @@
+package com.mobile.base.http;
+
+import com.mobile.api.proto.MAppNews.MNewsList;
+import com.mobile.api.proto.MAppNews.MRssList;
+import com.mobile.api.proto.MSystem.MClassList;
+
+import android.content.Context;
+
+public class ApiClientFactory {
+	/*
+	 * 获取新闻列表
+	 */
+	public static void getNewsListApi(Context context, Object controller, String methodName, int page, int limit) {
+		ParamsFormat pf = ParamsFormatFactory.getParamsFormat("MNewsList", page, limit);
+		MNewsList list = new MNewsList(); 
+		
+		ApiClient.getApiData(context, controller, methodName, pf, list);
+	}
+	
+	public static void getScheduleApi(Context context, Object controller, String methodName, String account, String password ,String code) {
+		ParamsFormat pf = ParamsFormatFactory.getParamsFormat("MSchedule");
+		pf.addParam("account", account);
+		pf.addParam("password", password);
+		pf.addParam("code", code);
+		MClassList list = new MClassList();
+		
+		
+		ApiClient.getApiData(context, controller, methodName, pf, list);
+		
+	}
+	
+	/*
+	 * 获取订阅列表
+	 */
+	public static void getRssList(Context context,Object controller,String methodName,int page ,int limit){		
+		ParamsFormat pf=ParamsFormatFactory.getParamsFormat("MAllRss",page,limit);
+		MRssList list=new MRssList();
+		
+		ApiClient.getApiData(context, controller, methodName, pf, list);
+	}
+	/*
+	 * 获取订阅的新闻列表
+	 */
+	public static void getMRssNews(Context context,Object controller,String methodName,String rssid,int page,int limit){		
+		ParamsFormat pf=ParamsFormatFactory.getParamsFormat("MRssNews",page,limit);
+		pf.addParam("rssid", rssid);
+		MNewsList list=new MNewsList();
+		
+		ApiClient.getApiData(context, controller, methodName, pf, list);
+	}
+
+	/*
+	 * 我的订阅
+	 */
+	public static void getMyRss(Context context,Object controller,String methodName,int page,int limit) {
+		ParamsFormat pf=ParamsFormatFactory.getParamsFormat("MMyRss",page,limit);
+		MRssList list=new MRssList();
+		
+		ApiClient.getApiData(context, controller, methodName, pf, list);
+	}
+}

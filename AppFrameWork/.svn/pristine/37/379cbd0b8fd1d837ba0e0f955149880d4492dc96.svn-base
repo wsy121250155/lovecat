@@ -1,0 +1,29 @@
+package com.mobile.zsdx.model;
+
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class TopicList extends ArrayList<Topic> implements Bean2Json<TopicList>{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public TopicList build(JSONObject jsonObject) throws Exception {
+
+		JSONArray ja = jsonObject.getJSONObject("data").getJSONArray("tags_");
+		
+		for(int i = 0 ; i<ja.length() ; i++){
+			Topic topic = new Topic();
+			topic.build(ja.getJSONObject(i));
+			this.add(topic);
+		}
+		
+		return this;
+	}
+
+}

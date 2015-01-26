@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://192.168.1.13:8443/svn/frame"
+   revision="2"
+   last-author="liulu"
+   url="https://192.168.1.13:8443/svn/frame/AandroidFrameWork/res/drawable-mdpi"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2014-07-08T00:47:16.713000Z"/>
+<entry
+   name=".DS_Store"
+   checksum="194577a7e20bdcc7afbb718f502c134c"
+   last-author="liulu"
+   text-time="2014-06-26T08:24:34.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:41.000000Z"/>
+<entry
+   name="vpi__tab_selected_focused_holo.9.png"
+   checksum="16638bf739aa1abf15c8e75508a27bda"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:39.000000Z"/>
+<entry
+   name="vpi__tab_selected_holo.9.png"
+   checksum="9045d003185b579c07849179554b8aef"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="vpi__tab_selected_pressed_holo.9.png"
+   checksum="29ee1e8a487e780621080232838c0d55"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:36.000000Z"/>
+<entry
+   name="vpi__tab_unselected_focused_holo.9.png"
+   checksum="4cc56af9c5566fbde9941ab989920a48"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:40.000000Z"/>
+<entry
+   name="vpi__tab_unselected_holo.9.png"
+   checksum="ea8438d5b1eed3300d1472ee18094ad9"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:35.000000Z"/>
+<entry
+   name="vpi__tab_unselected_pressed_holo.9.png"
+   checksum="8dc72eef80eeac76dbe42efa6ace53ac"
+   last-author="liulu"
+   text-time="2014-05-14T05:28:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2014-07-08T00:47:16.713000Z"
+   prop-time="2014-07-08T00:46:38.000000Z"/>
+</wc-entries>

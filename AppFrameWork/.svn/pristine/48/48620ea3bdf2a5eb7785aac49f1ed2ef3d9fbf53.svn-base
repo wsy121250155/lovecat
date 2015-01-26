@@ -1,0 +1,71 @@
+package com.mobile.zsdx.model;
+
+import org.json.JSONObject;
+
+public class Rss implements Bean2Json<Rss>{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String id;
+	private String img;
+	private String title;
+	private String content;
+	private int state;
+	private int count;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public int getState() {
+		return state;
+	}
+	public void setState(int state) {
+		this.state = state;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
+	@Override
+	public String toString(){
+		return "Rss [id=" + id + ", img=" + img + ", title=" + title
+				+ ", content=" + content + ", state=" + state + ", count=" + count + "]";
+	}
+	@Override
+	public Rss build(JSONObject jsonObject) throws Exception {
+		// TODO Auto-generated method stub
+		this.setContent(jsonObject.getString("content_"));
+		this.setCount(jsonObject.getInt("count_"));
+		this.setId(jsonObject.getString("id_"));
+		this.setImg(jsonObject.getString("img_"));
+		this.setState(jsonObject.getInt("state_"));
+		this.setTitle(jsonObject.getString("title_"));
+		
+		return this;
+	}
+
+}

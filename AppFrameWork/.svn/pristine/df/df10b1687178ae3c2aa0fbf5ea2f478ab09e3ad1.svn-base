@@ -1,0 +1,42 @@
+package com.mobile.zsdx.model;
+
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class TermList extends ArrayList<Term> implements Bean2Json<TermList> {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private byte[] img;
+
+	public byte[] getImg() {
+		return img;
+	}
+
+	public void setImg(byte[] img) {
+		this.img = img;
+	}
+
+
+
+	@Override
+	public TermList build(JSONObject jsonObject) throws Exception {
+		// TODO Auto-generated method stub\
+		JSONObject data = jsonObject.getJSONObject("data");
+		JSONArray ja = data.getJSONArray("term_");
+		
+		for(int i = 0, len = ja.length(); i < len; i++) {
+			Term n = new Term();
+			n.build(ja.getJSONObject(i));
+			this.add(n);
+		}
+		
+		img = data.getString("").getBytes();
+		
+		return this;
+	}
+
+}

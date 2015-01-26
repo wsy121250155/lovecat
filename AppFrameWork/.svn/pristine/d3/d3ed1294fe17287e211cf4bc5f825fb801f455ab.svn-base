@@ -1,0 +1,18 @@
+package com.mobile.zsdx.model;
+
+import org.json.JSONObject;
+
+public class Term implements Bean2Json<Term> {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public Term build(JSONObject jsonObject) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

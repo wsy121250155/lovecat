@@ -1,0 +1,46 @@
+package com.mobile.zsdx.treehole;
+
+import com.mobile.zsdx.model.TreeHoleCommon;
+import com.mobile.zsdx.model.TreeHoleCommonList;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+
+public class THCommonsAdapter extends BaseAdapter{
+
+	private TreeHoleCommonList mlist;
+	
+	private Context mcontext;
+	public THCommonsAdapter(Context context, TreeHoleCommonList list){
+		this.mcontext = context;
+		this.mlist = list;
+	}
+	@Override
+	public int getCount() {
+		return mlist.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		return mlist.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		TreeHoleCommon treeHoleCommon = new TreeHoleCommon();
+		if (convertView == null){
+			convertView = new THCommons(mcontext);
+		}
+		THCommons thCommons = (THCommons) convertView;
+		thCommons.setdata(treeHoleCommon);
+		return convertView;
+	}
+
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自定义进度条 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loading_process_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/process_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/process_bg"
+        android:gravity="center_horizontal" >
+
+        <ProgressBar
+            android:id="@+id/process_bar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/login_process_dialog"
+            android:indeterminateDuration="500"
+            android:indeterminateOnly="true"
+            android:interpolator="@android:anim/linear_interpolator" />
+
+        <TextView
+            android:id="@+id/process_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/process_bar"
+            android:textColor="#494949" >
+        </TextView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/process_cancel_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/process_layout"
+        android:background="@drawable/process_cancel"
+        android:clickable="true" />
+
+</RelativeLayout>

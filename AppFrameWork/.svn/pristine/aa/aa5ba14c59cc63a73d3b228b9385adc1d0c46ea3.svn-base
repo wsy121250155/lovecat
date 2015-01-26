@@ -1,0 +1,20 @@
+package com.mobile.zsdx.rss;
+
+import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+
+public class RSSDetailActivity extends ActionBarActivity{
+
+	private String title="";
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setActionBar();
+	}
+	public void setActionBar(){
+		ActionBar actionBar=getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayUseLogoEnabled(false);
+		actionBar.setTitle(title);
+	}
+}

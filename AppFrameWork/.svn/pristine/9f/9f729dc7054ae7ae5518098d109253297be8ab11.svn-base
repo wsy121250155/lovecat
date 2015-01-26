@@ -1,0 +1,74 @@
+package com.mobile.base.cache;
+
+import java.io.File;
+import java.io.IOException;
+
+import com.mobile.base.util.AppConfig;
+import com.mobile.base.util.MLog;
+
+import android.content.Context;
+import android.os.Environment;
+
+/**
+ * 缓存通用方法
+ * @author yjh
+ *
+ */
+public class CacheUtil {
+	private static String DEFAULT_DIR = "frame";
+	
+	/**
+	 * 获取缓存目录
+	 * 
+	 * @param context
+	 * @param path
+	 * @return
+	 * @throws IOException 
+	 */
+	public static File getDPath(Context context, String path) throws IOException {
+		File file = null;
+		File fparent = null;
+		
+		//path不能为空
+		path = path == null || path.length() == 0 ? "" : path;
+		
+		if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED) && AppConfig.isUseCard()) {
+			//获取系统外置存储卡位置
+			fparent = Environment.getExternalStorageDirectory();
+			
+		} else {
+			//模式暂时设置为私有
+			fparent = context.getDir(DEFAULT_DIR, Context.MODE_PRIVATE);
+		}
+		if(!fparent.exists()) {
+			fparent.mkdirs();
+		}
+		file = new File(new StringBuilder(fparent.getPath()).append("/").append(AppConfig.getTEMPPATH()).append("/").append(path).append("/").toString()); 
+
+		if(!file.exists()) {
+			file.mkdirs();
+		}
+		
+		return file;
+	}
+	
+	/**
+	 * 获取相应目录下的文件
+	 * @param context
+	 * @param path
+	 * @param filename
+	 * @return
+	 * @throws IOException 
+	 */
+	public static File getPath(Context context, String path, String filename) throws IOException {
+		File file = null;
+		
+		File dir = getDPath(context, path);
+		
+		if((dir != null) && dir.isDirectory()) {
+			file = new File(dir, filename);
+		}
+		
+		return file;
+	}
+}

@@ -1,0 +1,13 @@
+package com.mobile.base.util;
+
+public class UrlUtils {
+	public static String getFullUrl(String url) {
+		String res = "";
+		
+		if(url.startsWith("http://")) {
+			
+		}
+		
+		return res;
+	}
+}

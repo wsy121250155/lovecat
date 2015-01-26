@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/forget_pwd_top_bg" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/forget_pwd_center_bg"
+            android:orientation="vertical"
+            android:paddingBottom="20dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="找回密码"
+                android:textColor="#104957"
+                android:textSize="19sp" />
+
+            <!-- 工号 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="@dimen/login_area_margin"
+                android:layout_marginRight="@dimen/login_area_margin"
+                android:background="#fffefe"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/login_text_area_margin"
+                    android:layout_marginRight="@dimen/login_text_area_margin"
+                    android:background="@drawable/ic_username" />
+
+                <EditText
+                    android:id="@+id/user_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="请输入用户名"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="#6c6c6c"
+                    android:textSize="17sp" />
+            </LinearLayout>
+            <!-- 密码 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="@dimen/login_area_margin"
+                android:layout_marginRight="@dimen/login_area_margin"
+                android:layout_marginTop="10dp"
+                android:background="#fffefe"
+                android:gravity="center_vertical" >
+
+                <EditText
+                    android:id="@+id/new_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="请输入新密码"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="20dp"
+                    android:password="true"
+                    android:singleLine="true"
+                    android:textColor="#222222"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <!-- 密码确认 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="@dimen/login_area_margin"
+                android:layout_marginRight="@dimen/login_area_margin"
+                android:layout_marginTop="10dp"
+                android:background="#fffefe"
+                android:gravity="center_vertical" >
+
+                <EditText
+                    android:id="@+id/re_new_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="请再次输入新密码"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="20dp"
+                    android:password="true"
+                    android:singleLine="true"
+                    android:textColor="#222222"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="@dimen/login_area_margin"
+                android:layout_marginRight="@dimen/login_area_margin"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/obtain_code_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/forget_pwd_button"
+                    android:onClick="obtainCode"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="获取验证码"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/sms_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/obtain_code_btn"
+                    android:background="#fffefe"
+                    android:gravity="center"
+                    android:hint="手机短信验证码"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textColor="#222222"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/area_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="@dimen/login_area_margin"
+                android:layout_marginRight="@dimen/login_area_margin"
+                android:layout_marginTop="10dp"
+                android:background="#fffefe"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/login_text_area_margin"
+                    android:layout_marginRight="@dimen/login_text_area_margin"
+                    android:background="@drawable/ic_area" />
+
+                <com.ailk.ec.unitdesk.ui.widget.CommDropDownBoxLayout
+                    android:id="@+id/area_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sms_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/login_area_margin"
+                android:layout_marginRight="@dimen/login_area_margin"
+                android:layout_marginTop="20dp"
+                android:textColor="#6c6c6c"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="@dimen/login_area_margin"
+                android:layout_marginRight="@dimen/login_area_margin"
+                android:layout_marginTop="30dp" >
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/forget_pwd_button"
+                    android:onClick="submit"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/forget_pwd_button"
+                    android:onClick="cancel"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/forget_pwd_bottom_bg" >
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

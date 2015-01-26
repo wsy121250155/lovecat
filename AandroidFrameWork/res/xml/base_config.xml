@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base
+    TempPath="diedie"
+    BaseUri="http://192.168.1.183"
+    AppId="appid"
+    UseSdcard="true"
+    UpdateUri="http://192.168.1.103" >
+    <!--alkdjflkjalkfjdlkajflkdja  -->
+    <param name="page">index</param>
+    <param name="pagesize">size</param>
+    
+    <param name="id">value</param>
+    
+    <!-- webservicenamespace -->
+    <param name="WebServiceNamespace">value</param>
+    
+     <!-- WebServiceUrl -->
+    <param name="WebServiceUrl">value</param>
+</Base>

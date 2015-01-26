@@ -1,0 +1,45 @@
+package com.mobile.zsdx.treehole;
+
+import com.mobile.zsdx.model.Topic;
+import com.mobile.zsdx.model.TopicList;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+
+public class TopicAdapter extends BaseAdapter{
+
+	private Context mcontext;
+	private TopicList mList;
+	public TopicAdapter(Context context,TopicList list){
+		this.mcontext = context;
+		this.mList = list;
+	}
+	@Override
+	public int getCount() {
+		return mList.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		return mList.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		Topic topic = mList.get(position);
+		if(convertView == null){
+			convertView = new TopicItem(mcontext);
+		}
+		TopicItem topicItem = (TopicItem) convertView;
+		topicItem.set(topic);
+		return convertView;
+	}
+}

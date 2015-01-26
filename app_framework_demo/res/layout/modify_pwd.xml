@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f4f4f4" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_top_height"
+        android:background="@drawable/posts_topbar" >
+
+        <LinearLayout
+            android:id="@+id/back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:onClick="back"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/back_button"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="修改密码"
+            android:textColor="#494949"
+            android:textSize="@dimen/common_top_title_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_layout"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp" >
+
+        <!-- 原密码 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="17dp"
+            android:background="#e7e7e7"
+            android:gravity="center_vertical"
+            android:padding="1dp" >
+
+            <EditText
+                android:id="@+id/old_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="请输入旧密码"
+                android:imeOptions="actionNext"
+                android:paddingLeft="14dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="#222222"
+                android:textSize="17sp" >
+            </EditText>
+        </LinearLayout>
+        <!-- 新密码 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="13dp"
+            android:background="#e7e7e7"
+            android:gravity="center_vertical"
+            android:padding="1dp" >
+
+            <EditText
+                android:id="@+id/new_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="请输入新密码"
+                android:imeOptions="actionNext"
+                android:paddingLeft="14dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="#222222"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <!-- 再次输入新密码 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="13dp"
+            android:background="#e7e7e7"
+            android:gravity="center_vertical"
+            android:padding="1dp" >
+
+            <EditText
+                android:id="@+id/re_new_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="请再次输入新密码"
+                android:imeOptions="actionDone"
+                android:paddingLeft="14dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="#222222"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/exit_btn"
+            android:onClick="submit"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</RelativeLayout>

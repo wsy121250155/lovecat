@@ -1,0 +1,100 @@
+package com.mobile.zsdx.model;
+
+import org.json.JSONObject;
+
+public class News implements Bean2Json<News> {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String id;
+	private String img;
+	private String source;
+	private String title;
+	private String content;
+	private String time;
+	private String url;
+	private String author;
+	private int comment;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getTime() {
+		return time;
+	}
+	public void setTime(String time) {
+		this.time = time;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public int getComment() {
+		return comment;
+	}
+	public void setComment(int comment) {
+		this.comment = comment;
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "News [id=" + id + ", img=" + img + ", source=" + source
+				+ ", title=" + title + ", content=" + content + ", time="
+				+ time + ", url=" + url + ", author=" + author + ", comment="
+				+ comment + "]";
+	}
+	@Override
+	public News build(JSONObject jsonObject) throws Exception {
+		// TODO Auto-generated method stub
+		this.setAuthor(jsonObject.getString("author_"));
+		this.setComment(jsonObject.getInt("comment_"));
+		this.setContent(jsonObject.getString("content_"));
+		this.setId(jsonObject.getString("id_"));
+		this.setImg(jsonObject.getString("img_"));
+		this.setSource(jsonObject.getString("source_"));
+		this.setTime(jsonObject.getString("time_"));
+		this.setTitle(jsonObject.getString("title_"));
+		this.setUrl(jsonObject.getString("url_"));
+		
+		return this;
+	}
+
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Image
+    ImageMinLoad="10"
+    ImageParam="image=[view_width]x[view_height]"
+    ImageLoadType="GET"
+    ImageUrl="http://192.168.1.159:8080/MSJ/" >
+
+    <Url name="news">http://192.168.1.13:188/news/download.do?id=</Url>
+</Image>

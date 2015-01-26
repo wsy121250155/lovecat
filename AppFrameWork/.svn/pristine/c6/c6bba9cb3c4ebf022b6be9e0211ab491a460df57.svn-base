@@ -1,0 +1,11 @@
+package com.mobile.zsdx.util;
+
+public class F {
+	public static int colorind = 0; 
+	public static int[] Colors = new int[] { 0xffe37afa, 0xffff6296, 0xffffa9a5, 0xffffca85, 0xffffcd1e, 0xff4ba8ff,
+        0xff8f80ff, 0xff00c4e7, 0xff76e9bc, 0xff9cd87b, 0xffCC9999 };
+	
+	public static int getColor(int ind) {
+        return Colors[Math.abs(ind % Colors.length)];
+    }
+}
