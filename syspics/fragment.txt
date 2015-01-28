@@ -1,0 +1,14 @@
+attention: 
+android.app.activity中不能包含v4.fragment的组件
+
+layout中不可以单独只放另一个layout
+
+*************************************************
+transaction.replace(R.id.FrameLayout1, viewFragment).commit();
+1.注意，这里第一个参数是fragment的容器的id(不是布局文件名，是根布局名称)，不是被替换的fragment的id
+2.注意记得要commit，否则没有用
+*************************************************
+在第一个fragment添加的时候就用replace方法
+*************************************************
+app.activity can holds app.fragment
+switch works
